@@ -1,3 +1,9 @@
+_MIEMBROS DEL EQUIPO_
+- Diego Ezquerra Barroso : d.ezquerra.2024@alumnos.urjc.es
+- Bárbara Cruz González : b.cruzg.2024@alumnos.urjc.es
+- Rocío Zancajo Zapatero : r.zancajo.2024@alumnos.urjc.es
+- Sara El Moussaoui Houlbi  : s.elmoussaoui.2024@alumnos.urjc.es
+  
 #Catálogo de Libros
 
 Este proyecto es una aplicación para gestionar un catálogo de libros, donde cada libro puede tener múltiples reseñas asociadas.  
@@ -10,7 +16,7 @@ Posibilidad de listar libros con sus reseñas.
 Búsqueda por título, autor o género.
 Interfaz sencilla y extensible (según el stack usado).
 
-Entidades principal:
+Entidad principal:
 
 Libro
 - ID (único)
@@ -19,7 +25,8 @@ Libro
 - Género
 - Año de publicación
 - Descripción
-Entidades secundaria:
+  
+Entidad secundaria:
 Reseña
 - ID (único)
 - Libro (referencia al libro reseñado)
