@@ -10,7 +10,7 @@ Posibilidad de listar libros con sus reseñas.
 Búsqueda por título, autor o género.
 Interfaz sencilla y extensible (según el stack usado).
 
-Entidades principales
+Entidades principal:
 
 Libro
 - ID (único)
@@ -19,7 +19,7 @@ Libro
 - Género
 - Año de publicación
 - Descripción
-
+Entidades secundaria:
 Reseña
 - ID (único)
 - Libro (referencia al libro reseñado)
