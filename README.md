@@ -32,5 +32,5 @@ Reseña
 - Libro (referencia al libro reseñado)
 - Usuario (quién hace la reseña)
 - Comentario
-- Puntuación (ej. 1 a 5 estrellas)
+- Puntuación, (ej. 1 a 5 estrellas)
 - Fecha
