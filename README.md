@@ -17,7 +17,6 @@ Búsqueda por título, autor o género.
 Interfaz sencilla y extensible (según el stack usado).
 
 Entidad principal:
-
 Libro
 - ID (único)
 - Título
@@ -32,5 +31,5 @@ Reseña
 - Libro (referencia al libro reseñado)
 - Usuario (quién hace la reseña)
 - Comentario
-- Puntuación, (ej. 1 a 5 estrellas)
+- Puntuación (ej. 1 a 5 estrellas)
 - Fecha
