@@ -11,3 +11,6 @@ form {
     border-radius: 0.375rem;
     background-color: #ffffff;
 }
+form div {
+    margin-bottom: 1rem;
+}
