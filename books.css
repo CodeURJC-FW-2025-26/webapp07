@@ -1,0 +1,16 @@
+footer {
+    background-color: light;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+#foot {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+main {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
