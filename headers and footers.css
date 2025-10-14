@@ -22,3 +22,7 @@ header h1 {
 header .btn {
     font-size: 1rem;
 }
+header div div {
+    display: flex;
+    gap: 0.5rem;
+}
