@@ -8,3 +8,7 @@ footer {
     justify-content: center;
     gap: 1rem;
 }
+main {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
