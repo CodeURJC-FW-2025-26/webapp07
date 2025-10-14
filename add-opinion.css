@@ -14,3 +14,7 @@ form {
 form div {
     margin-bottom: 1rem;
 }
+form div div {
+    display: flex;
+    gap: 0.5rem;
+}
