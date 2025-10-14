@@ -19,3 +19,6 @@ header .container {
 header h1 {
     margin: 0;
 }
+header .btn {
+    font-size: 1rem;
+}
