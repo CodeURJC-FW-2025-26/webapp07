@@ -26,3 +26,9 @@ header div div {
     display: flex;
     gap: 0.5rem;
 }
+footer {
+
+    text-align: center;
+    margin-top: 1rem;
+
+}
