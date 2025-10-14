@@ -3,3 +3,8 @@ footer {
     text-align: center;
     padding: 1.5rem;
 }
+#foot {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
