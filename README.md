@@ -57,6 +57,11 @@ Bárbara Cruz González:
 - Description of my tasks during the practice: During this practice of the website, my responsibility was to create the HTML pages for the secondary entities (book1.html, book2.html, book3.html, book4.html, book7.html), specifically the Books section. I designed and structured the 5 individual HTML files, ensuring that each page presented the relevant information clearly and consistently. I also searched for and selected the books to include, gathered their reviews and synopses, and incorporated this information into the pages. Additionally, I added the headers and footers to maintain a uniform design across the site. In addition, I participated in the design and development of the main page, contributing to its layout and overall visual structure to ensure a coherent and appealing presentation throughout the website.
 
 - 5 best commits:
+    - [book5.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/923ede16ad8e2e5820a68f6eaa1676a75eb26bb1)
+    - [book6.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/7b2b36c3e1a76b37eec089027b3fadb097a3ec37)
+    - [book8.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/84709f325b3feaf4396e9426361cc3f413925ecb)
+    - [book9.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/70b962b9e911b13dcd617a3f9ab5970ac1ad42ef)
+    - [book10.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/d009fdcebfc8262947fe1254a88e3e359fb725a6)
 
 - 5 files most participated:
    - book5.html
