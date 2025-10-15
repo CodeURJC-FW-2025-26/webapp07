@@ -37,11 +37,37 @@ Review
 - Date
 # PARTICIPATION OF THE TEAM MEMBERS #
 
-Sara:
+Sara El Moussaoui Houlbi:
 
-Bárbara:
+- 5 best commits:
 
-Diego:
+- 5 files most participated:
 
-Rocío:
+- Description of my tasks during the practice:
+
+Bárbara Cruz González:
+
+- 5 best commits:
+
+- 5 files most participated:
+
+- Description of my tasks during the practice:
+
+Diego Ezquerra Barroso:
+
+- 5 best commits:
+
+- 5 files most participated:
+
+- Description of my tasks during the practice:
+
+Rocío Zancajo Zapatero:
+
+- 5 best commits:
+
+- 5 files most participated:
+
+- Description of my tasks during the practice:
+
+
 
