@@ -40,5 +40,8 @@ Review
 Sara:
 
 Bárbara:
+
 Diego:
+
 Rocío:
+
