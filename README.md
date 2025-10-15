@@ -54,7 +54,7 @@ Sara El Moussaoui Houlbi:
    - book7.html
     
 Bárbara Cruz González:
-- Description of my tasks during the practice: During this practice I have made the html of 5 books and also i made part of another one. In addition, i have also participate in the creation and aesthetic design of the page and the choice of books. I have searched both reviews and users as well as the synopsis. Besides 
+- Description of my tasks during the practice: During this practice of the website, my responsibility was to create the HTML pages for the secondary entities (book1.html, book2.html, book3.html, book4.html, book7.html), specifically the Books section. I designed and structured the 5 individual HTML files, ensuring that each page presented the relevant information clearly and consistently. I also searched for and selected the books to include, gathered their reviews and synopses, and incorporated this information into the pages. Additionally, I added the headers and footers to maintain a uniform design across the site. In addition, I participated in the design and development of the main page, contributing to its layout and overall visual structure to ensure a coherent and appealing presentation throughout the website.
 
 - 5 best commits:
 
