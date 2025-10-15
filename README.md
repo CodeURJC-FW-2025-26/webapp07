@@ -67,7 +67,11 @@ Rocío Zancajo Zapatero:
 
 - 5 files most participated:
 
-- Description of my tasks during the practice:
+- Description of my tasks during the practice: 
+My participation focused on the development and design of several important parts of the website. I worked on the visual aspect of the catalogue using **catalog-grid.css**, and on the creation of the main page **index.html**, ensuring that the design was clear and consistent with the rest of the project. I also developed **add-book.html** along with its style sheet **add-book.css**, taking care to ensure that the form for adding books was easy to understand and aesthetically pleasing. In addition, I contributed to **add-opinion.html**, allowing users to leave their opinions. During the whole project, I worked with my teammates to make sure the website looked good and adjusted properly to different devices and screen sizes. 
+
+
+
 
 
 
