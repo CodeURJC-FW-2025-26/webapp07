@@ -74,11 +74,11 @@ Rocío Zancajo Zapatero:
 My participation focused on the development and design of several important parts of the website. I worked on the visual aspect of the catalogue using **catalog-grid.css**, and on the creation of the main page **index.html**, ensuring that the design was clear and consistent with the rest of the project. I also developed **add-book.html** along with its style sheet **add-book.css**, taking care to ensure that the form for adding books was easy to understand and aesthetically pleasing. In addition, I contributed to **add-opinion.html**, allowing users to leave their opinions. During the whole project, I worked with my teammates to make sure the website looked good and adjusted properly to different devices and screen sizes. 
 
 - 5 best commits:
-  - [add-book.css](https://github.com/CodeURJC-FW-2025-26/webapp07/blob/main/add-book.css)
-  - [add-book.html](https://github.com/CodeURJC-FW-2025-26/webapp07/blob/main/add-book.html)
-  - [add-opinion.html](https://github.com/CodeURJC-FW-2025-26/webapp07/blob/main/add-opinion.html)
-  - [catalog-grid.css](https://github.com/CodeURJC-FW-2025-26/webapp07/blob/main/catalog-grid.css)
-  - [index.html](https://github.com/CodeURJC-FW-2025-26/webapp07/blob/main/index.html)
+  - [add-book.css](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/5098faa01bc57018ef4ff18a9f0a1d3bf9d3dfa9)
+  - [add-book.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/762ef5eefab166e1c9674fd3fff5ba3839510d65)
+  - [add-opinion.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/a4ab5b5e0522a0453572dec7066764bb9c2c23f6)
+  - [catalog-grid.css](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/4912d8a272498d5feaafa5dbc01cebf9b273461b)
+  - [index.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/9586a7681ded2b68d99e1b09d52239404ec5eaf7)
 
 - 5 files most participated:
 
