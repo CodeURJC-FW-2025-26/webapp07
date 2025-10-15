@@ -54,12 +54,18 @@ Sara El Moussaoui Houlbi:
    - book7.html
     
 Bárbara Cruz González:
+- Description of my tasks during the practice: During this practice I have made the html of 5 books and also i made part of another one. In addition, i have also participate in the creation and aesthetic design of the page and the choice of books. I have searched both reviews and users as well as the synopsis. Besides 
 
 - 5 best commits:
 
 - 5 files most participated:
+   - book5.html
+   - book6.html
+   - book8.html
+   - book9.html
+   - book10.html
 
-- Description of my tasks during the practice:
+
 
 Diego Ezquerra Barroso:
 
