@@ -36,3 +36,8 @@ Review
 - Rating (e.g., 1 to 5 stars)
 - Date
 # PARTICIPACIÓN DE LOS MIEMBROS DEL EQUIPO #
+
+Sara:
+Bárbara:
+Diego:
+Rocío:
