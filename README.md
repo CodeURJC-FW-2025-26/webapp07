@@ -81,7 +81,6 @@ Bárbara Cruz González:
 
 Diego Ezquerra Barroso:
 
-Bárbara Cruz González:
 - Description of my tasks during the practice: During this practice of the website, i was in charge of the style of the page and contribute to the structure. With **headers and footers.css** we introduce and create the style of the all the headers and all the footers for them to have the same style. Also i made the structure of all the headers and footers that apear in all the pages. In **add-opinion.css** i give the page add-opinion.html style for it to have a good display. With **book11:html** i develop the style of all the book pages in **books.css**. Finally i help to finish and add details to **index.html**. I worked with my mates to add other general functions to the website and get a good result.
 
 - 5 best commits:
