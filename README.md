@@ -81,11 +81,22 @@ Bárbara Cruz González:
 
 Diego Ezquerra Barroso:
 
+Bárbara Cruz González:
+- Description of my tasks during the practice: During this practice of the website, i was in charge of the style of the page and contribute to the structure. With **headers and footers.css** we introduce and create the style of the all the headers and all the footers for them to have the same style. Also i made the structure of all the headers and footers that apear in all the pages. In **add-opinion.css** i give the page add-opinion.html style for it to have a good display. With **book11:html** i develop the style of all the book pages in **books.css**. Finally i help to finish and add details to **index.html**. I worked with my mates to add other general functions to the website and get a good result.
+
 - 5 best commits:
+    - [headers and footers.css](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/20c04725867b6864fff2fc458a4200ce2908cf32)
+    - [books.css](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/e2408dea286b62f3f56db5ba5b0b2ac9897fc2c8)
+    - [add-opinion.css](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/02d7cb2c20dfffbb12e3520231ded4f114e03ed2)
+    - [book11.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/d6cb0a9b4222260c84dea69f2d1e4fe94de31fe3)
+    - [index.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/fea05085f44d01fa952b33a1cbedff72cbc6259b)
 
 - 5 files most participated:
-
-- Description of my tasks during the practice:
+   - headers and footers.css
+   - books.css
+   - add-opinion.css
+   - book11.html
+   - index.html
 
 Rocío Zancajo Zapatero:
 
