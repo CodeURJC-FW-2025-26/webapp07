@@ -43,6 +43,12 @@ Sara El Moussaoui Houlbi:
  During this project I have done the html of 5 of the books(book1.html, book2.html, book3.html, book4.html and book7.html) and half of one of them (book11.html), where I have maintained the header of the website with the option of adding a new book and the filter option. In addition to that, about the books, I have added the images of the book covers, aside from the name of the author, the genre of the book, the year in which the book was published, a brief synopsis and the overall rating of the reviews.Those reviews are showed just below all that it was mantioned before. In the opinions I have added the score that the user gave to the book next to their opinion. Last but not least, there is a footer where the user can go back to the main page of the book catalog, the button for adding a new opinion and the option of deleting the book or editing the book. 
 
 - 5 best commits.
+  - [book1.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/000e88564db816b61c0874aa85de934c9cdee19f).
+  - [book2.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/41798bc28b7605586ffad0c465a7c8004f58c51d).
+  - [book3.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/f76c18502105862cbb7f332a571474a40af33342).
+  - [book4.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/dcdfe40d770c1c603bf58400ad8884e96922ca03).
+  - [book7.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/0dd325a59469f035cffd40a43c947ba0eb4951d7).
+
   
 
 - 5 files most participated.
