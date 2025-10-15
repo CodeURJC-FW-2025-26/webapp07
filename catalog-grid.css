@@ -1,7 +1,7 @@
 /* Style */
 
 
-/* Grid gontainer */
+/* Grid container */
 .grid-books {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -64,7 +64,7 @@
   justify-content: center;
 }
 
-/* Boton */
+/* Button */
 .book-card a.btn {
   font-size: 0.85rem;
   margin-top: auto;
