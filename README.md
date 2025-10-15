@@ -39,12 +39,19 @@ Review
 
 Sara El Moussaoui Houlbi:
 
-- 5 best commits:
+- Description of my tasks during the practice.
+ During this project I have done the html of 5 of the books(book1.html, book2.html, book3.html, book4.html and book7.html) and half of one of them (book11.html), where I have maintained the header of the website with the option of adding a new book and the filter option. In addition to that, about the books, I have added the images of the book covers, aside from the name of the author, the genre of the book, the year in which the book was published, a brief synopsis and the overall rating of the reviews.Those reviews are showed just below all that it was mantioned before. In the opinions I have added the score that the user gave to the book next to their opinion. Last but not least, there is a footer where the user can go back to the main page of the book catalog, the button for adding a new opinion and the option of deleting the book or editing the book. 
 
-- 5 files most participated:
+- 5 best commits.
 
-- Description of my tasks during the practice:
-
+- 5 files most participated.
+  I have particepated the most on these 5 files:
+   - book1.html
+   - book2.html
+   - book3.html
+   - book4.html
+   - book7.html
+    
 Bárbara Cruz González:
 
 - 5 best commits:
