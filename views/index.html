@@ -48,13 +48,13 @@
   <!-- PAGINACIÓN -->
 <div class="pagination">
   {{#prevPage}}
-    <a href="/?page={{prevPage}}" class="btn btn-outline-secondary">Anterior</a>
+    <a href="/?page={{prevPage}}&search={{query}}" class="btn btn-outline-secondary">Anterior</a>
   {{/prevPage}}
 
   <span>Página {{currentPage}} de {{totalPages}}</span>
 
   {{#nextPage}}
-    <a href="/?page={{nextPage}}" class="btn btn-outline-secondary">Siguiente</a>
+    <a href="/?page={{nextPage}}&search={{query}}" class="btn btn-outline-secondary">Siguiente</a>
   {{/nextPage}}
 </div>
 
