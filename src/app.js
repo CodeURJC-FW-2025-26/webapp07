@@ -3,7 +3,7 @@ import path from 'node:path';
 import mongoose from 'mongoose';
 import mustacheExpress from 'mustache-express';
 import { fileURLToPath } from 'node:url';
-import Libro from './models/Libro.js'; // Asegúrate de usar extensión .js
+import Libro from './models/Libro.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -26,7 +26,9 @@ app.get('/', async (req, res) => {
     ? {
         $or: [
           { title: { $regex: query, $options: 'i' } },
-          { author: { $regex: query, $options: 'i' } }
+          { author: { $regex: query, $options: 'i' } },
+          { Genre: { $regex: query, $options: 'i' } },
+          (isNumeric ? [{ Year: parseInt(query) }] : []),
         ]
       }
     : {};
@@ -51,7 +53,6 @@ mongoose.connect('mongodb://localhost:27017/board', {
 });
 
 
-// ... tu ruta principal aquí ...
 
 app.listen(3000, () => {
   console.log('Servidor activo en http://localhost:3000');
