@@ -5,7 +5,7 @@ import path from 'node:path';
 const router = express.Router(); // va arriba, fuera de  ruta
 export default router;
 
-const DATA_FILE = path.join(process.cwd(), 'data', 'data.json');
+const DATA_FILE = path.join(process.cwd(), 'data', 'book.json');
 
 // HOME — Mostrar libros
 router.get('/', async (req, res) => {
@@ -42,7 +42,7 @@ router.get('/', async (req, res) => {
     });
 
   } catch (err) {
-    console.error("Error al leer data.json:", err);
+    console.error("Error al leer book.json:", err);
     res.status(500).send("Error al cargar los libros");
   }
 });
