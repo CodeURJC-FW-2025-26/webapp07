@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <title>Book Catalog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Bootstrap para botones -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Tus estilos -->
   <link rel="stylesheet" href="catalog-grid.css">
   <link rel="stylesheet" href="Headers and footers.css">
 </head>
-
 <body>
 
   <!-- CABECERA -->
   <header>
-<div class="container d-flex justify-content-between align-items-center">      <h1>Book Catalog</h1>
-  
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1>Book Catalog</h1>
 
       <div class="d-flex gap-2">
         <a href="/add-book" class="btn btn-outline-light">Add book</a>
 
         <!-- Buscador -->
-        <form action="/" method="GET" class="d-flex">
-          <input class="form-control" type="search" name="q" placeholder="Buscar..." value="{{query}}">
+        <form method="GET" action="/" class="search-bar">
+          <input type="text" name="search" placeholder="Buscar por título o autor" value="{{query}}">
+          <button type="submit">Buscar</button>
         </form>
       </div>
     </div>
@@ -34,11 +29,9 @@
 
   <!-- GRID DINÁMICO -->
   <main class="grid-books">
-
     {{#posts}}
     <div class="book-card">
       <img src="{{bookimg}}" alt="{{title}}">
-
       <div class="card-body">
         <h5 class="card-title">{{title}}</h5>
         <p class="card-text">{{author}}</p>
@@ -50,23 +43,20 @@
     {{^posts}}
     <p>No hay libros disponibles.</p>
     {{/posts}}
-
   </main>
 
   <!-- PAGINACIÓN -->
-  <div class="pagination mt-4 mb-4 d-flex justify-content-center gap-3">
+<div class="pagination">
+  {{#prevPage}}
+    <a href="/?page={{prevPage}}" class="btn btn-outline-secondary">Anterior</a>
+  {{/prevPage}}
 
-    {{#hasPrev}}
-    <a class="btn btn-secondary" href="/?page={{prevPage}}{{queryParam}}">← Anterior</a>
-    {{/hasPrev}}
+  <span>Página {{currentPage}} de {{totalPages}}</span>
 
-    <span>Página {{currentPage}} de {{totalPages}}</span>
-
-    {{#hasNext}}
-    <a class="btn btn-secondary" href="/?page={{nextPage}}{{queryParam}}">Siguiente →</a>
-    {{/hasNext}}
-
-  </div>
+  {{#nextPage}}
+    <a href="/?page={{nextPage}}" class="btn btn-outline-secondary">Siguiente</a>
+  {{/nextPage}}
+</div>
 
   <!-- PIE -->
   <footer>
