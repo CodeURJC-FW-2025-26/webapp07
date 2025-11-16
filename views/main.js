@@ -1,6 +1,6 @@
 let allBooks = [];
 
-fetch('./data.json')
+fetch('./book.json')
   .then(response => response.json())
   .then(books => {
     allBooks = books;
