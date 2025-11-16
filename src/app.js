@@ -1,22 +1,33 @@
 import express from 'express';
+import path from 'node:path';
+import mongoose from 'mongoose';
 import mustacheExpress from 'mustache-express';
-import bodyParser from 'body-parser';
+import { fileURLToPath } from 'node:url';
+import Libro from './models/Libro.js'; // Asegúrate de usar extensión .js
 
-
-import router from './router.js';
-import './load_data.js';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use(express.static('./public'));
-
+app.engine('html', mustacheExpress());
 app.set('view engine', 'html');
-app.set('views', './views');
+app.set('views', path.join(__dirname, '..', 'views'));
 
-app.engine('html', mustacheExpress(), ".html");
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.get('/', async (req, res) => {
+  const posts = await Libro.find(); // o [] si no usas MongoDB aún
+  res.render('index', { posts, query: '' });
+});
 
-app.use('/', router);
+mongoose.connect('mongodb://localhost:27017/catalogo', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
-app.listen(3000, () => console.log('Web ready in http://localhost:3000/'));
+// ... tu ruta principal aquí ...
+
+app.listen(3000, () => {
+  console.log('Servidor activo en http://localhost:3000');
+});
