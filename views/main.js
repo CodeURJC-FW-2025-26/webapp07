@@ -1,4 +1,3 @@
-
 let allBooks = [];
 
 fetch('./data.json')
@@ -30,7 +29,7 @@ function renderBooks(books) {
   });
 }
 
-// 🔍 Escucha el input de búsqueda
+//Escucha el input de búsqueda
 document.getElementById('search-input').addEventListener('input', function () {
   const query = this.value.toLowerCase();
   const filtered = allBooks.filter(book =>
