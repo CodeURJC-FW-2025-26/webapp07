@@ -2,7 +2,7 @@ import express from 'express';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-const router = express.Router(); // ✅ esto va arriba, fuera de cualquier ruta
+const router = express.Router(); // va arriba, fuera de  ruta
 export default router;
 
 const DATA_FILE = path.join(process.cwd(), 'data', 'data.json');
