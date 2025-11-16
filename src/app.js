@@ -17,14 +17,39 @@ app.set('views', path.join(__dirname, '..', 'views'));
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/', async (req, res) => {
-  const posts = await Libro.find(); // o [] si no usas MongoDB aún
-  res.render('index', { posts, query: '' });
+  const page = parseInt(req.query.page) || 1;
+  const limit = 6;
+  const skip = (page - 1) * limit;
+  const query = req.query.search || '';
+
+  const searchFilter = query
+    ? {
+        $or: [
+          { title: { $regex: query, $options: 'i' } },
+          { author: { $regex: query, $options: 'i' } }
+        ]
+      }
+    : {};
+
+  const total = await Libro.countDocuments(searchFilter);
+  const posts = await Libro.find(searchFilter).skip(skip).limit(limit);
+  const totalPages = Math.ceil(total / limit);
+
+  res.render('index', {
+    posts,
+    query,
+    currentPage: page,
+    totalPages,
+    prevPage: page > 1 ? page - 1 : null,
+    nextPage: page < totalPages ? page + 1 : null
+  });
 });
 
-mongoose.connect('mongodb://localhost:27017/catalogo', {
+mongoose.connect('mongodb://localhost:27017/board', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
+
 
 // ... tu ruta principal aquí ...
 
