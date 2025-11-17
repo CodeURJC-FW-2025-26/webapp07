@@ -47,6 +47,18 @@ app.get('/', async (req, res) => {
   });
 });
 
+app.use(express.urlencoded({ extended: true}));
+
+app.post('/add-book.html', async (req, res) => {
+  try{
+    await Libro.create(req.body);
+    res.redirect('/');
+  } catch (error) {
+    console.error('Error al crear libro:', error);
+    res.status(400).send('Error al crear libro. Comprueba los campos.');
+  }
+});
+
 mongoose.connect('mongodb://localhost:27017/board', {
   useNewUrlParser: true,
   useUnifiedTopology: true
