@@ -50,6 +50,14 @@ router.get('/', async (req, res) => {
 
 
 
+router.get('/detalle', (req, res) => {
+
+    res.render('detalle', {
+        posts: boardService.getPosts()
+        
+    });
+});
+
 
 router.use((req, res, next) => {
     let err = new Error('Page not found');
