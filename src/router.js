@@ -48,7 +48,30 @@ router.get('/', async (req, res) => {
 });
 
 
+router.get('/add-book', (req, res) => {
 
+    res.render('add-book', {
+        posts: boardService.getPosts()
+
+router.post('/add-book', async (req, res) => {
+  try {
+    const { title, author, genre, year, cover } = req.body;
+
+   
+    if (!title || !author || !year) {
+      return res.redirect('/error.html'); 
+    }
+
+    
+    const newBook = new Book({ title, author, genre, year, image: cover });
+    await newBook.save();
+
+    res.redirect('/books'); 
+  } catch (err) {
+    console.error("Error al procesar el formulario:", err);
+    res.redirect('/error.html'); // error
+  }
+});
 
 router.get('/detalle', (req, res) => {
 
