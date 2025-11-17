@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Book Catalog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap solo para botones -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tu hoja de estilos con Grid -->
+  <link rel="stylesheet" href="catalog-grid.css">
+  <link type="text/css" rel="stylesheet" href="Headers and footers.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/" class="btn btn-secondary">Vew all the elements</a>
+    </nav>
+    
+    <header class="bg-dark text-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1>Book Catalog</h1>
+            <a href="index.html" class="btn btn-outline-light">Volver al catálogo</a>
+        </div>
+    </header>
+
+
+    <main class="container mt-4" id="detalle">
+        <p>Loading book details...</p>
+    </main>
+
+
+    <div class="container mt-5">
+        
+
+        <div class="card">
+            <img src="{{post.booking}}"
+                alt="Imagen del libro {{post.title}}" class="card-img-top img-fluid">
+            <div class="book-card">
+                <h4 class="card-title text-center">{{post.title}}</h4>
+                <p class="card-text">author: {{post.author}}</p>
+                <p class="card-text"> {{post.Synopsis}}
+                </p>
+                <p class="card-text">Year: {{post.Year}}</p>
+                <p class="card-text">Genre: {{post.Genre}}</p>
+                <a href="/post/edit/{{post.id}}" class="btn btn-primary">Editar</a>
+                <a href="/post/delete/{{post.id}}" class="btn btn-danger">Borrar</a>
+            </div>
+        </div>
+
+
+        
+
+
+
+      
+    </div>
+
+      <!-- Pie de página -->
+       <footer>
+            <br>
+            <p>&copy; 2025 Book Catalog | Created by Team 7</p>
+       </footer>
+
+</body>
+
+</html>
