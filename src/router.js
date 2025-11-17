@@ -49,13 +49,17 @@ router.get('/', async (req, res) => {
 
 
 
-router.get('/', async (req, res) => {
-  try {
-    const books = await Book.find();
-    res.json(books);
-  } catch (err) {
-    res.status(500).json({ error: 'Error fetching books' });
-  }
+
+
+router.use((req, res, next) => {
+    let err = new Error('Page not found');
+    err.status = 404;
+    next(err);
 });
+
+router.use((err, req, res, next) => {
+    console.error(err.stack); 
+    res.status(err.status || 500).render('error', { title: 'Error', message: err.message }); 
+
 
 module.exports = router;
