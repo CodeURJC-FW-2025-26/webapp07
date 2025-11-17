@@ -46,3 +46,16 @@ router.get('/', async (req, res) => {
     res.status(500).send("Error al cargar los libros");
   }
 });
+
+
+
+router.get('/', async (req, res) => {
+  try {
+    const books = await Book.find();
+    res.json(books);
+  } catch (err) {
+    res.status(500).json({ error: 'Error fetching books' });
+  }
+});
+
+module.exports = router;
