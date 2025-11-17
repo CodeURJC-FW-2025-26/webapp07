@@ -1,39 +1,48 @@
-//to redirect the page here when it gives an error
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-   <title>404 Error</title>
-   
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-   <link type="text/css" rel="stylesheet" href="Headers and footers.css" />
-   <link type="text/css" rel="stylesheet" href="books.css">
-   
-   <style>
-      body {
-         text-align: center;
-         background: url(https://dinahosting.com/blog/upload/2021/03/error-404.jpg);
-         background-size: auto;
-         background-attachment: fixed;
-         background-position: center;
-         display: flex;
-         flex-direction: column;
-         height: 100vh;
-      }
-      footer {
-         margin-top: auto; 
-      }
-   </style>
+  <meta charset="UTF-8">
+  <title>404 ERROR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap solo para botones -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tu hoja de estilos con Grid -->
+  <!-- <link rel="stylesheet" href="catalog-grid.css">-->
+  <link type="text/css" rel="stylesheet" href="../public/confirmation.css">
 </head>
-   
+
 <body>
 
+  <!-- Cabecera -->
+  <header>
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1>Book Catalog</h1>
+      <div class="d-flex gap-2">
+        <a href="add-book.html" class="btn btn-outline-light">Add book</a>
+        <a href="filter.html" class="btn btn-outline-light">Filter</a>
+      </div>
+    </div>
+  </header>
+  <br>
+  <div class="contenedor">
+
+    <div class="mensaje">
+      Redirijase a la página principal. <br> Error 404: Página no encontrada.
+    </div>
+    <br>
+    <a href="index.html" class="volver-btn">Back to catalog</a>
+  </div>
+
+
+  <!-- Pie de página -->
+
+
+
    <footer>
-      <div id='foot'>
-         
-         <a href="index.html" class="btn btn-outline-secondary">← Back to Catalog</a>
      
-      </div> <br>
+       <br>
       <p>&copy; 2025 Book Catalog | Created by Team 7</p>
    </footer>
 </body>
