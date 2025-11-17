@@ -31,28 +31,18 @@
 
 
     <div class="container mt-5">
-        
-
         <div class="card">
-            <img src="{{post.booking}}"
-                alt="Imagen del libro {{post.title}}" class="card-img-top img-fluid">
-            <div class="book-card">
-                <h4 class="card-title text-center">{{post.title}}</h4>
-                <p class="card-text">author: {{post.author}}</p>
-                <p class="card-text"> {{post.Synopsis}}</p>
-                <p class="card-text">Year: {{post.Year}}</p>
-                <p class="card-text">Genre: {{post.Genre}}</p>
-                <a href="/post/edit/{{post.id}}" class="btn btn-primary">Editar</a>
-                <a href="/post/delete/{{post.id}}" class="btn btn-danger">Borrar</a>
-            </div>
+          <img src="{{post.booking}}" alt="Imagen del libro {{post.title}}" class="card-img-top img-fluid">
+          <div class="card-body">
+            <h4 class="card-title text-center">{{post.title}}</h4>
+            <p class="card-text"><strong>Author:</strong> {{post.author}}</p>
+            <p class="card-text"><strong>Synopsis:</strong> {{post.Synopsis}}</p>
+            <p class="card-text"><strong>Year:</strong> {{post.Year}}</p>
+            <p class="card-text"><strong>Genre:</strong> {{post.genre}}</p>
+            <a href="/books/edit/{{post._id}}" class="btn btn-primary">Editar</a>
+            <a href="/books/delete/{{post._id}}" class="btn btn-danger">Borrar</a>
+          </div>
         </div>
-
-
-        
-
-
-
-      
     </div>
 
       <!-- Pie de página -->
