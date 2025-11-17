@@ -20,7 +20,7 @@
     <header class="bg-dark text-white p-3">
         <div class="container d-flex justify-content-between align-items-center">
             <h1>Book Catalog</h1>
-            <a href="index.html" class="btn btn-outline-light">Volver al catálogo</a>
+            <a href="index.html" class="btn btn-outline-light">Back to catalog</a>
         </div>
     </header>
 
@@ -39,8 +39,7 @@
             <div class="book-card">
                 <h4 class="card-title text-center">{{post.title}}</h4>
                 <p class="card-text">author: {{post.author}}</p>
-                <p class="card-text"> {{post.Synopsis}}
-                </p>
+                <p class="card-text"> {{post.Synopsis}}</p>
                 <p class="card-text">Year: {{post.Year}}</p>
                 <p class="card-text">Genre: {{post.Genre}}</p>
                 <a href="/post/edit/{{post.id}}" class="btn btn-primary">Editar</a>
