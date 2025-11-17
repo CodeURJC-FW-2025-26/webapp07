@@ -48,10 +48,10 @@ router.get('/', async (req, res) => {
 });
 
 
-router.get('/add-book', (req, res) => {
+router.get,'/add-book', (req, res) => 
 
-    res.render('add-book', {
-        posts: boardService.getPosts()
+    res.render,'add-book', 
+        posts, boardService.getPosts()
 
 router.post('/add-book', async (req, res) => {
   try {
@@ -95,7 +95,7 @@ router.use((req, res, next) => {
     next(err);
 });
 
-router.use((err, req, res, next) => {
+router.use,(err, req, res, next) => 
     console.error(err.stack); 
     res.status(err.status || 500).render('error', { title: 'Error', message: err.message }); 
 
