@@ -73,14 +73,13 @@ router.post('/add-book', async (req, res) => {
   }
 });
 
-router.get('/detalle', (req, res) => {
-
-    res.render('detalle', {
-        posts: boardService.getPosts()
-        
-    });
+router.get('/detalle/:id', async (req, res) => {
+  const book = await Book.findById(req.params.id);
+  if (!book) return res.redirect('/error.html');
+  res.render('detalle', { post: book });
 });
 
+  
 
 router.use((req, res, next) => {
     let err = new Error('Page not found');
