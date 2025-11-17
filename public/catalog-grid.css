@@ -1,0 +1,88 @@
+/* Estilo general */
+
+
+/* Contenedor Grid */
+.grid-books {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+
+/* Tarjeta de libro */
+.book-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Imagen del libro */
+.book-card img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Contenido de la tarjeta */
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+/* Título del libro */
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  min-height: 2.5em; /* Fuerza altura uniforme */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Autor del libro */
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+  min-height: 2em; /* Fuerza altura uniforme */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botón */
+.book-card a.btn {
+  font-size: 0.85rem;
+  margin-top: auto;
+}
+
+/* Pie de página */
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center; /*centra horizontalmente */
+  align-items: center;
+  gap: 20px;
+  margin: 30px auto;
+  font-size: 1.1rem;
+}
