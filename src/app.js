@@ -3,7 +3,7 @@ import path from 'node:path';
 import mongoose from 'mongoose';
 import mustacheExpress from 'mustache-express';
 import { fileURLToPath } from 'node:url';
-import Libro from './models/Libro.js';
+import Libro from './models/libro.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
