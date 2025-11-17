@@ -78,8 +78,16 @@ router.get('/detalle/:id', async (req, res) => {
   if (!book) return res.redirect('/error.html');
   res.render('detalle', { post: book });
 });
-
   
+router.get('/books/delete/:id', async (req, res) => {
+  try {
+    const deleted = await Book.findByIdAndDelete(req.params.id);
+    res.redirect('/'); // vuelve al catálogo
+  } catch (err) {
+    console.error("Error al borrar libro:", err);
+    res.redirect('/error.html');
+  }
+});
 
 router.use((req, res, next) => {
     let err = new Error('Page not found');
