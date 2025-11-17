@@ -22,20 +22,24 @@ app.get('/', async (req, res) => {
   const skip = (page - 1) * limit;
   const query = req.query.search || '';
 
+  const isNumeric = !isNaN(query); // ✅ esta línea evita el error
+
   const searchFilter = query
     ? {
         $or: [
           { title: { $regex: query, $options: 'i' } },
           { author: { $regex: query, $options: 'i' } },
           { Genre: { $regex: query, $options: 'i' } },
-          (isNumeric ? [{ Year: parseInt(query) }] : []),
+          ...(isNumeric ? [{ Year: parseInt(query) }] : [])
         ]
       }
     : {};
 
+  const libros = await Libro.find(searchFilter).skip(skip).limit(limit);
   const total = await Libro.countDocuments(searchFilter);
-  const posts = await Libro.find(searchFilter).skip(skip).limit(limit);
   const totalPages = Math.ceil(total / limit);
+
+  const posts = libros.map(libro => libro.toObject?.() || libro);
 
   res.render('index', {
     posts,
