@@ -1,4 +1,4 @@
-# TEAM MEMEBERS #
+# TEAM MEMBERS #
 - Diego Ezquerra Barroso : d.ezquerra.2024@alumnos.urjc.es
 - Bárbara Cruz González : b.cruzg.2024@alumnos.urjc.es
 - Rocío Zancajo Zapatero : r.zancajo.2024@alumnos.urjc.es
