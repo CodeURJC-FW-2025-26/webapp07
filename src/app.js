@@ -139,6 +139,7 @@ app.get('/detalle/:id', async (req, res) => {
 
     res.render('detalle', {
       ...libro,
+      _id:libro._id,
       imgUrl,
       opinions
     });
