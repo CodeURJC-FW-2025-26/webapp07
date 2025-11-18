@@ -1,94 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>{{title}}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap solo para botones -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Tu hoja de estilos con Grid -->
   <link rel="stylesheet" href="catalog-grid.css">
-  <link type="text/css" rel="stylesheet" href="Headers and footers.css">
+  <link rel="stylesheet" href="Headers and footers.css">
 </head>
-
 <body>
 
-    <header class="bg-dark text-white p-3">
-      <div class="container d-flex justify-content-between align-items-center py-3">
-        <h1>Book Catalog</h1>
+  <header class="bg-dark text-white p-3">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <h1>Book Catalog</h1>
       <div>
         <a href="/add-book.html" class="btn btn-outline-light">Add book</a>
         <a href="/filter.html" class="btn btn-outline-light">Filter</a>
       </div>
     </div>
-    </header>
+  </header>
 
-
-    <div class="container mt-4">
-      <div class="row justify-content-center">
-        <div class="col-md-10">
-          <div class="card p-4">
-            <div class="row">
-              <div class="col-md-4 text-center">
-                {{#imgUrl}}
-                <img src="{{imgUrl}}" class="img-fluid rounded" alt="{{title}}">
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="card p-4">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              {{#imgUrl}}
+              <img src="{{imgUrl}}" class="img-fluid rounded" alt="{{title}}">
               {{/imgUrl}}
+            </div>
+            <div class="col-md-8">
+              <p><strong>Author:</strong> {{author}}</p>
+              <p><strong>Genre:</strong> {{Genre}}</p>
+              <p><strong>Year:</strong> {{Year}}</p>
+              <p><strong>Synopsis:</strong><br>{{Synopsis}}</p>
+              <p><strong>Rating:</strong> {{rating}}</p>
+
+              <div class="d-flex gap-2 mt-3">
+                <a href="/edit-book/{{_id}}" class="btn btn-warning">Edit book</a>
+                <form method="POST" action="/post/delete/{{_id}}" style="display:inline">
+                  <button class="btn btn-danger" type="submit">Erase</button>
+                </form>
               </div>
-              <div class="col-md-8">
-                <p><strong>Author:</strong> {{author}}</p>
-                <p><strong>Genre:</strong> {{Genre}}</p>
-                <p><strong>Year:</strong> {{Year}}</p>
-                <p><strong>Synopsis:</strong><br>{{Synopsis}}</p>
-                <p><strong>Rating:</strong> {{rating}}<p>
-              </div>
+            </div>
           </div>
+        </div>
 
-    <hr>
+        <hr>
 
-    <section>
-       <h4><strong>Opinions</strong></h4>
+        <section>
+          <h4><strong>Opinions</strong></h4>
 
-          {{#post.opinions}}
+          {{#opinions}}
           <div class="border rounded p-3 mb-3">
-            <p><strong>{{author}}</strong></p>
-            <p>{{text}}</p>
+            <p><strong>{{email}}</strong></p>
+            <p>{{opinion}}</p>
 
             {{#rating}}
             <p><strong>Rating:</strong> {{rating}} / 5</p>
             {{/rating}}
 
             <div class="d-flex gap-2">
-              <!-- Edit opinion (GET form expected at this route) -->
-              <a href="/detalle/{{post._id}}/opinions/{{_id}}/edit" class="btn btn-outline-primary btn-sm">Edit</a>
-
-              <!-- Delete opinion (POST) -->
-              <form method="POST" action="/detalle/{{post._id}}/opinions/{{_id}}/delete" style="display:inline">
-                <button onclick="deleteBook('ID_DEL_LIBRO')">Borrar</button>
+              <a href="/edit-opinion/{{_id}}" class="btn btn-outline-primary btn-sm">Edit</a>
+              <form method="POST" action="/delete-opinion/{{_id}}" style="display:inline">
+                <button class="btn btn-danger btn-sm" type="submit">Delete</button>
               </form>
             </div>
           </div>
-          {{/post.opinions}}
+          {{/opinions}}
 
-          {{^post.opinions}}
+          {{^opinions}}
           <p>No opinions yet.</p>
-          {{/post.opinions}}
+          {{/opinions}}
+        </section>
+      </div>
+    </div>
+  </div>
 
-          <hr>
-      <h4>Opinions</h4>
-      <p><strong>Alicia:</strong> Honestly, it has been a very interesting book to read. Without even realizing it, I
-        was already at the end of it, and I highly recommend it if you’re looking for a story that combines romance and
-        drama. It truly captivated me as a reader. ★★★★☆</p>
-    </section>
-  </main>
-  
-      <!-- Pie de página -->
   <footer class="text-center py-4 bg-light">
     <a href="/" class="btn btn-outline-secondary">← Back to Catalog</a>
     <a href="/add-opinion.html" class="btn btn-primary">Add opinion</a>
-    <a href="/post/edit-review/{{post._id}}" class="btn btn-primary">Edit opinion</a>
-    <a href="/edit-book/{{post._id}}" class="btn btn-primary">Edit book</a>
-    <a href="/post/delete/{{post._id}}" class="btn btn-danger">Erase</a>
     <p class="mt-3">&copy; 2025 Book Catalog | Created by Team 7</p>
   </footer>
 </body>
