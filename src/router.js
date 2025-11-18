@@ -79,14 +79,17 @@ router.get('/detalle/:id', async (req, res) => {
   res.render('detalle', { post: book });
 });
   
-router.get('/books/delete/:id', async (req, res) => {
-  try {
-    const deleted = await Book.findByIdAndDelete(req.params.id);
-    res.redirect('/'); // vuelve al catálogo
-  } catch (err) {
-    console.error("Error al borrar libro:", err);
-    res.redirect('/error.html');
-  }
+
+// DELETE 
+app.delete('/books/:id', async (req, res) => {
+    const id = req.params.id;
+
+    try {
+        await Book.findByIdAndDelete(id);
+        res.json({ success: true, message: "Delete" });
+    } catch (error) {
+        res.status(500).json({ success: false, message: "Error al borrar el libro" });
+    }
 });
 
 router.use((req, res, next) => {
