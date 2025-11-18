@@ -109,6 +109,27 @@ app.post('/add-book', async (req, res) => {
   }
 });
 
+app.get('/detalle/:id', async (req, res) => {
+  try {
+    const libro = await Post.findById(req.params.id).lean();
+
+    if (!libro) {
+      return res.status(404).send('Libro no encontrado');
+    }
+
+    const isValidUrl = libro.bookimg?.startsWith('http://') || libro.bookimg?.startsWith('https://');
+    const imgUrl = isValidUrl ? libro.bookimg : null;
+
+    res.render('detalle', {
+      ...libro,
+      imgUrl
+    });
+  } catch (error) {
+    console.error('Error al cargar detalle:', error);
+    res.status(500).send('Error interno del servidor');
+  }
+});
+
 // Conexión a MongoDB
 mongoose.connect('mongodb://localhost:27017/board', {
   useNewUrlParser: true,
