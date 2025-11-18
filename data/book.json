@@ -1,163 +1,115 @@
-
 [
-   
-   {
-        _id:Objectid('691b12a2189924f89090548a') ,
-        "title": "Binding 13",
-        "author": "Chloe Walsh",
-        "Genre": "Juvenil", 
-        "Year": "2018" ,
-         "URL": "https://imagessl3.casadellibro.com/a/l/s7/73/9788419357373.webp" ,
-      
-
-
-        "Synopsis": " HE WANTS TO SAVE HER, AND SHE WANTS TO DISAPPEAR.FATE HAS BROUGHT THEM TOGETHER, AND LOVE WILL UNITE THEM. NO MATTER THE COST FOR EITHER OF THEM. Johnny Kavanagh has everything going for him. On the rugby field, he’s a beast, even with the terrible injury he’s hiding. Everyone knows he’s destined to reach the top, but to get there, he can’t afford any distractions — not even the shy new girl at Tommen College. For Shannon Lynch, however, life has never been easy. Bullied and tormented, she arrives at Tommen College halfway through the school year in search of a fresh start. But when, on her very first day, she meets the famous Johnny Kavanagh, her plan to stay unnoticed is suddenly at risk. As they form a complicated friendship, forced to confront the undeniable chemistry between them, a dark secret threatens to destroy everything. But Johnny won’t give up on Shannon.",
-        "bookimg": "/images/book1.jpg"
-    },
-
-    
-    {    
-        _id:Objectid('691b12a2189924f89090548b') ,
-        "title": "Keeping 13",
-        "author": "Chloe Walsh",
-        "Genre": "Juvenil", 
-        "Year": "2018" ,
-        "URL": "https://imagessl3.casadellibro.com/a/l/s7/93/9788419746993.webp" ,
-
-
-        "Synopsis": "FALLING IN LOVE WAS EASY. WHAT COMES NEXT IS THE REAL CHALLENGE. After a devastating injury that has sent him to the sidelines, Johnny Kavanagh clings to his dreams as best he can. Lost, insecure, and in need of comfort, he decides to unravel the mysteries surrounding the blue-eyed girl he can’t stop thinking about for even a minute. Keeping a secret has never been a problem for Shannon Lynch. She knows all too well that demons and villains lurk not only in stories, but also in the real world. Traumatized after returning from Dublin and desperate to protect her younger brothers, Shannon ends up playing the same old charade while her future crumbles before her eyes. The only way to protect herself is to build a wall around her. Only one boy will be able to climb that wall — the same one who has stolen her heart. However, secrets are about to come to light that will change their lives forever. Will the love between Johnny and Shannon survive it all?</p>",
-        "bookimg": "/images/book2.jpg"
-    },
-
-     {
-         _id:Objectid('691b12a2189924f89090548c') ,
-        "title": "Saving 6",
-        "author": "Chloe Walsh",
-        "Genre": "Juvenil", 
-        "Year": "2024" , 
-        "URL": "https://imagessl9.casadellibro.com/a/l/s7/79/9788419746979.webp" ,
-
-
-        "Synopsis": "He's a boy who's lost. She's girl who might just be the home he's never had. The second born son in a broken marriage, Joey Lynch has spent a lifetime picking up the pieces of a family unravelling. When his older brother Darren skips town, twelve-year-old Joey finds himself thrown into the role of protector to his younger siblings and mother. Plagued by self-loathing, and furious with the world, he grapples with teenage life and his unwavering sense of duty to his family, while balancing precariously close to a life of addiction that threatens to swallow him whole. The only light in his sea of darkness is his boss's firecracker of a daughter who refuses to back down. A girl who just so happens to be his classmate. Aoife Molloy has never been backwards in coming forward. Her bubbly and self-assured nature has never led her astray. Until her first day of secondary school when she collides with a hot-headed boy who sparks a burning curiosity inside of her that only grows stronger by the day. Falling into a complicated friendship with her father's apprentice, Aoife works to unravel the secrets around Joey Lynch's life - while he desperately fights to keep her out.",
-        "bookimg": "/images/book3.jpg"
-    },
-
-
-    {
-         _id:Objectid('691b12a2189924f89090548d') ,
-        "title": "Reedeming 6",
-        "author": "Chloe Walsh",
-        "Genre":"Juvenil" , 
-        "Year":"2024" , 
-        "URL": "https://imagessl6.casadellibro.com/a/l/s7/16/9788410298316.webp" ,
-
-
-        "Synopsis": " I'm saving you, six. With his world unravelling around him, and pressure rising at home, Joey Lynch's life has never been in more turmoil. Desperate to prove himself worthy of the only person he's ever put his trust in, Joey fights to stay away from a world that threatens to destroy everything. But with the odds stacking against him by the day, can he keep his head above water? Unwilling to give up on the boy she loves, Aoife Molloy fights to save her best friend from the edge of self-destruction. Drowning in a world she doesn't understand, with only her heart to guide her, Aoife refuses to turn her back on Joey, no matter how badly the odds are stacked against them. Through heartbreak and horror, Aoife and Joey have had each other's backs, and this time is no different. Come what may",
-        "bookimg": "/images/book4.jpg"
-    },
-
-    
-    {
-         _id:Objectid('691b12a2189924f89090548e') ,
-        "title": "Taming 7",
-        "author": "Chloe Walsh",
-        "Genre":"Juvenil" , 
-        "Year":"2024" , 
-        "URL": "https://imagessl4.casadellibro.com/a/l/s7/94/9788410298194.webp" ,
-
-
-        "Synopsis": "Tommens cheeky lad, Gerard Gibsie Gibson, is a comedian at heart, but underneath his happy-go-lucky-nature lurks a broken boy, tortured by the events of his past. Using humour to cope with his demons, Gibsie hides everything from the world. Only one person knows who he truly is on the inside. His friends little sister. His Claire-bear. Enveloped in sunshine, Claire Biggs has spent her whole life adoring the boy across the street. Her brothers friend. Seeing a side to Gerard that no one else sees, Claire is determined to tame her wild-at-heart childhood best friend. But when the unexpected occurs and lines are crossed, will Gibsie and Claires friendship survive? Will it blossom into something more, or will they lose themselves in the riptide?",
-        "bookimg": "/images/book5.jpg"
-    },
-
-    
-    {
-         _id:Objectid('691b12a2189924f89090548f') ,
-        "title": "Releasing 10",
-        "author": "Chloe Walsh",
-        "Genre": "Juvenil", 
-        "Year": "2025" ,
-        "URL": "https://imagessl2.casadellibro.com/a/l/s7/22/9788419848222.webp" ,
-
-
-        "Synopsis": " A love that couldn't be broken, except by the truth. Lizzie Young has always felt she was too much everything. Diagnosed with bipolar disorder at a young age, she's never fit in with her family, her friends, her community. Lizzie wants to be accepted and understood, but with few people in her corner, she's carried her burdens and her trauma on her own. But when she meets a kind boy on the school bus, things start to look bright for the first time in her life . . . Hugh Biggs has an old soul and the wisdom of someone far beyond his years. A young man with a sharp mind and a firm code of ethics, he sees something in Lizzie Young that he can't resist. He wants to be her everything and shoulder her burden. And Lizzie wants that too. Lizzie and Hugh's bond seems unbreakable - their chemistry is electric, their love is potent, and their connection is soul deep - but even the truest love can be shaken by forces beyond control.",
-        "bookimg": "/images/book6.jpg"
-    },
-
-    {
-     _id:Objectid('691b12a2189924f890905490') ,
+  {
+    "title": "Binding 13",
+    "author": "Chloe Walsh",
+    "Genre": "Juvenil",
+    "Year": "2018",
+    "Synopsis": " HE WANTS TO SAVE HER, AND SHE WANTS TO DISAPPEAR.FATE HAS BROUGHT THEM TOGETHER, AND LOVE WILL UNITE THEM. NO MATTER THE COST FOR EITHER OF THEM. Johnny Kavanagh has everything going for him. On the rugby field, he’s a beast, even with the terrible injury he’s hiding. Everyone knows he’s destined to reach the top, but to get there, he can’t afford any distractions — not even the shy new girl at Tommen College. For Shannon Lynch, however, life has never been easy. Bullied and tormented, she arrives at Tommen College halfway through the school year in search of a fresh start. But when, on her very first day, she meets the famous Johnny Kavanagh, her plan to stay unnoticed is suddenly at risk. As they form a complicated friendship, forced to confront the undeniable chemistry between them, a dark secret threatens to destroy everything. But Johnny won’t give up on Shannon.",
+    "bookimg": "https://multimedia.dideco.es/img/literatura/EAN_9788419357373-5.jpg"
+  },
+  {
+    "title": "Keeping 13",
+    "author": "Chloe Walsh",
+    "Genre": "Juvenil",
+    "Year": "2018",
+    "Synopsis": "FALLING IN LOVE WAS EASY. WHAT COMES NEXT IS THE REAL CHALLENGE. After a devastating injury that has sent him to the sidelines, Johnny Kavanagh clings to his dreams as best he can. Lost, insecure, and in need of comfort, he decides to unravel the mysteries surrounding the blue-eyed girl he can’t stop thinking about for even a minute. Keeping a secret has never been a problem for Shannon Lynch. She knows all too well that demons and villains lurk not only in stories, but also in the real world. Traumatized after returning from Dublin and desperate to protect her younger brothers, Shannon ends up playing the same old charade while her future crumbles before her eyes. The only way to protect herself is to build a wall around her. Only one boy will be able to climb that wall — the same one who has stolen her heart. However, secrets are about to come to light that will change their lives forever. Will the love between Johnny and Shannon survive it all?</p>",
+    "bookimg": "https://m.media-amazon.com/images/I/71CPBW6c2PL._AC_UF350,350_QL50_.jpg"
+  },
+  {
+    "title": "Saving 6",
+    "author": "Chloe Walsh",
+    "Genre": "Juvenil",
+    "Year": "2024",
+    "Synopsis": "He's a boy who's lost. She's girl who might just be the home he's never had. The second born son in a broken marriage, Joey Lynch has spent a lifetime picking up the pieces of a family unravelling. When his older brother Darren skips town, twelve-year-old Joey finds himself thrown into the role of protector to his younger siblings and mother. Plagued by self-loathing, and furious with the world, he grapples with teenage life and his unwavering sense of duty to his family, while balancing precariously close to a life of addiction that threatens to swallow him whole. The only light in his sea of darkness is his boss's firecracker of a daughter who refuses to back down. A girl who just so happens to be his classmate. Aoife Molloy has never been backwards in coming forward. Her bubbly and self-assured nature has never led her astray. Until her first day of secondary school when she collides with a hot-headed boy who sparks a burning curiosity inside of her that only grows stronger by the day. Falling into a complicated friendship with her father's apprentice, Aoife works to unravel the secrets around Joey Lynch's life - while he desperately fights to keep her out.",
+    "bookimg": "https://m.media-amazon.com/images/I/91vugeRUx4L._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "Reedeming 6",
+    "author": "Chloe Walsh",
+    "Genre": "Juvenil",
+    "Year": "2024",
+    "Synopsis": " I'm saving you, six. With his world unravelling around him, and pressure rising at home, Joey Lynch's life has never been in more turmoil. Desperate to prove himself worthy of the only person he's ever put his trust in, Joey fights to stay away from a world that threatens to destroy everything. But with the odds stacking against him by the day, can he keep his head above water? Unwilling to give up on the boy she loves, Aoife Molloy fights to save her best friend from the edge of self-destruction. Drowning in a world she doesn't understand, with only her heart to guide her, Aoife refuses to turn her back on Joey, no matter how badly the odds are stacked against them. Through heartbreak and horror, Aoife and Joey have had each other's backs, and this time is no different. Come what may",
+    "bookimg": "https://www.abacus.coop/dw/image/v2/BDLM_PRD/on/demandware.static/-/Sites-AbacusMaster/default/dw8450097a/images/large/1510196.01.jpg?sw=740"
+  },
+  {
+    "title": "Taming 7",
+    "author": "Chloe Walsh",
+    "Genre": "Juvenil",
+    "Year": "2024",
+    "Synopsis": "Tommens cheeky lad, Gerard Gibsie Gibson, is a comedian at heart, but underneath his happy-go-lucky-nature lurks a broken boy, tortured by the events of his past. Using humour to cope with his demons, Gibsie hides everything from the world. Only one person knows who he truly is on the inside. His friends little sister. His Claire-bear. Enveloped in sunshine, Claire Biggs has spent her whole life adoring the boy across the street. Her brothers friend. Seeing a side to Gerard that no one else sees, Claire is determined to tame her wild-at-heart childhood best friend. But when the unexpected occurs and lines are crossed, will Gibsie and Claires friendship survive? Will it blossom into something more, or will they lose themselves in the riptide?",
+    "bookimg": "https://m.media-amazon.com/images/I/81-zZlhOeuL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "Releasing 10",
+    "author": "Chloe Walsh",
+    "Genre": "Juvenil",
+    "Year": "2025",
+    "Synopsis": " A love that couldn't be broken, except by the truth. Lizzie Young has always felt she was too much everything. Diagnosed with bipolar disorder at a young age, she's never fit in with her family, her friends, her community. Lizzie wants to be accepted and understood, but with few people in her corner, she's carried her burdens and her trauma on her own. But when she meets a kind boy on the school bus, things start to look bright for the first time in her life . . . Hugh Biggs has an old soul and the wisdom of someone far beyond his years. A young man with a sharp mind and a firm code of ethics, he sees something in Lizzie Young that he can't resist. He wants to be her everything and shoulder her burden. And Lizzie wants that too. Lizzie and Hugh's bond seems unbreakable - their chemistry is electric, their love is potent, and their connection is soul deep - but even the truest love can be shaken by forces beyond control.",
+    "bookimg": "https://images.cdn1.buscalibre.com/fit-in/520x520/f2/32/f232748d9f855071212b398d5a6b6089.jpg"
+  },
+  {
     "title": "Culpa Mía",
     "author": "Mercedes Ron",
     "Genre": "Juvenil",
     "Year": "2017",
-    "URL": "" ,
-
     "Synopsis": "Noah Morgan lives a quiet, normal life with her mother in Toronto...until her mother meets and marries William Leister, a wealthy and enigmatic lawyer from California. Noah finds herself moving to LA, leaving her volleyball team, her best friend, and her boyfriend behind. Upon arriving in her new life of private schools and pool parties, she meets her new brother, Nicholas college student, and seemingly the typical spoiled rich kid. Noah has no desire to get along with him, especially when she discovers Nick's secret life of clandestine car racing and street fights. Not to mention, Noah has her own demons on her tail, and doesn't want Nick's nose in any of them. But what the two don't account for is the powerful physical attraction between them–enough to turn their world upside-down. Can love conquer the dark side of these LA streets, or will Nick and Noah be swallowed by the dark things between them?",
-        "bookimg": "/images/book7.jpg"
-},
-
-
-
-
-{    
-     _id:Objectid('691b12a2189924f890905491') ,
+    "bookimg": "https://images.booksense.com/images/737/290/9781728290737.jpg"
+  },
+  {
     "title": "Culpa Tuya",
     "author": "Mercedes Ron",
     "Genre": "Juvenil",
     "Year": "2017",
-    "URL": "" ,
-   
     "Synopsis": "When Noah fell in love with Nick, she knew their relationship would never be easy. They're fire and electricity, and when they're together, every kind of sparks fly. After last summer, Noah thought their passion had grown stronger than their fear, but her life is about to turn upside-down again now that she's starting university. Moving again while maintaining her relationship with Nick will be a difficult hurdle, with their age difference, campus life, dangerous parties, and inner demons stalking them both, reminding them of all they still don't know about each other. No matter how hard they try, there will always be wounds that won't close. Is Noah really prepared to overcome her fears and truly trust someone again? Will Nick be able to put his past behind him and keep his heart open? Or are they doomed only to burn each other's worlds down?",
-        "bookimg": "/images/book8.jpg"
-
-},
-
-
-
-
-{
-     _id:Objectid('691b12a2189924f890905492') ,
+    "bookimg": "https://cdn.ozone.bg/media/catalog/product/cache/1/image/400x498/a4e40ebdc3e371adff845072e1c73f37/y/o/7c60ba09f0375acfe689b8d876971bd1/your-fault-culpable-2-30.jpg"
+  },
+  {
     "title": "Culpa Nuestra",
     "author": "Mercedes Ron",
     "Genre": "Juvenil",
     "Year": "2018",
-    "URL": "" ,
-   
     "Synopsis": "In the grand finale, 'Our Fault', Nick and Noah must decide if their love is worth fighting for. They are ultimately pushed by proximity and desire to uncover if their love can overcome their past lies and betrayals. Most importantly, can they forgive and trust each other once more?",
-    "bookimg": "/images/book9.jpg"
-},
-
-
-
-
-{   
-     _id:Objectid('691b12a2189924f890905493') ,
+    "bookimg": "https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/393679.jpg"
+  },
+  {
     "title": "Teo en la granja",
     "author": "Violeta Denou",
     "Genre": "Infantil",
     "Year": "1977",
-    "URL": "https://m.media-amazon.com/images/I/61AEJgh9iXL._SX342_SY445_ControlCacheEqualizer_.jpg" ,
-   
     "Synopsis": "Join Teo on his visit to the farm! Teo, his family and some friends are going on holiday to a country cottage. There they will learn how to milk cows, go on excursions, feed the animals and tend the vegetable garden. So many things to do and learn on the farm!",
-    "bookimg": "/images/book10.jpg"
-},
-
-
-{    
-     _id:Objectid('691b12a2189924f890905494') ,
+    "bookimg": "https://i.ytimg.com/vi/dYcXZobqHT8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDecsURqBaUv8PGMEiWCSWpgFcgSg"
+  },
+  {
     "title": "Pupi quiere ser futbolista",
-    "author": "María Menéndez-Ponte",   
+    "author": "María Menéndez-Ponte",
     "Genre": "Infantil",
     "Year": "2010",
-    "URL": "https://imagessl1.casadellibro.com/a/l/s7/31/9788467576931.webp" ,
-   
     "Synopsis": "A group of friends, a football match and Pupi's crazy ideas... What an explosive combination! Pupi loves playing football with his friends, even though he gets a bit confused with the goals. Blanca and Bego invite him to visit the stadium, and there... there Pupi will become the real star of the match.",
-    "bookimg": "/images/book11.jpg"
-}
-
-
-
+    "bookimg": "https://m.media-amazon.com/images/I/61W6CVyt5QL.jpg"
+  },
+  {
+    "title": "The Striker",
+    "author": "Ana Huang",
+    "Genre": "Juvenil",
+    "Year": "2024",
+    "bookimg": "https://prodimage.images-bn.com/pimages/9781464236730_p0_v4_s1200x630.jpg",
+    "Synopsis": "Based on the Premier League in England, the novel follows a male footballer, Asher Donovan, as he faces difficulties with his team, butts heads with his rival-turned-teammate Vincent DuBois, and falls in love with his trainer, a former prima ballerina named Scarlett DuBois, who happens to be his rival's sister."
+  
+  },
+  {
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "Genre": "Dystopian, Science fiction, Drama, Horror, Action",
+    "Year": "2008",
+    "Synopsis": "The Hunger Games follows 16-year-old Katniss Everdeen, a girl from District 12 who volunteers for the 74th Hunger Games in place of her younger sister Primrose Everdeen. Also selected from District 12 is Peeta Mellark, who once saved Katniss from starvation when they were children. They are mentored by their district's only living victor, Haymitch Abernathy, who won 24 years earlier and has since led a solitary life of alcoholism.",
+    "bookimg": "https://m.media-amazon.com/images/I/71WSzS6zvCL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "Cien años de soledad",
+    "author": " Gabriel García Márquez",
+    "Genre": "Novel",
+    "Year": "1967",
+    "Synopsis": "One Hundred Years of Solitude narrates the saga of seven generations of the Buendía family in the fictional town of Macondo, founded by José Arcadio Buendía and his wife Úrsula Iguarán.",
+    "bookimg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Cien_a%C3%B1os_de_soledad.png/500px-Cien_a%C3%B1os_de_soledad.png"
+  }
 ]
-
-    
-
