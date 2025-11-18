@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
       Genre: book.Genre,
       Year: book.Year,
       Synopsis: book.Synopsis,
-      bookimg: book.bookimg
+      imUrl: book.imgUrl
     }));
 
     const page = parseInt(req.query.page) || 1;
