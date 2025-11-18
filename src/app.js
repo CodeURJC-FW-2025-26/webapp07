@@ -208,9 +208,9 @@ app.get('/insert-opinion-manual', async (req, res) => {
 
 // Guardar nueva opinión
 app.post('/add-opinion', async (req, res) => {
-  const { email, password, opinion, rating } = req.body;
+  const { email, password, opinion, rating, bookId } = req.body;
   try {
-    await Opinion.create({ email, password, opinion, rating });
+    await Opinion.create({ email, password, opinion, rating, bookId });
     res.redirect('/confirmation.html');
   } catch (error) {
     console.error('Error al guardar opinión:', error);
