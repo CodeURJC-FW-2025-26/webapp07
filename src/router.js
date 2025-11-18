@@ -80,14 +80,12 @@ router.get('/detalle/:id', async (req, res) => {
 });
   
 
-router.get('/books/delete/:id', async (req, res) => {
-  try {
-    const deleted = await Book.findByIdAndDelete(req.params.id);
-    res.redirect('/'); // vuelve al catálogo
-  } catch (err) {
-    console.error("Error al borrar libro:", err);
-    res.redirect('/error.html');
-  }
+router.get('/libro/:id/delete', async (req, res) => {
+  let libro = await catalog.deletelibro(req.params.id);
+  if (Book && libro.imageFilename) {
+    await fs.rm(catalog.UPLOADS_FOLDER + '/' + libro.imageFilename);
+    }
+    res.redirect('/libro');
 });
 
 
