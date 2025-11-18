@@ -4,8 +4,8 @@ import fs from 'fs';
 import mongoose from 'mongoose';
 import mustacheExpress from 'mustache-express';
 import { fileURLToPath } from 'node:url';
-import multer from 'multer';
-import Libro from './models/libro.js';
+import validator from 'validator';
+import Post from './models/libro.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,25 +22,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Middleware para leer formularios
 app.use(express.urlencoded({ extended: true }));
-
-// Configuración de multer para subir imágenes
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, '..', 'public', 'images'));
-  },
-  filename: async (req, file, cb) => {
-    try {
-      const count = await Libro.countDocuments(); // número actual de libros
-      const ext = path.extname(file.originalname); // extensión original (.jpg, .png)
-      const newName = `book${count + 1}${ext}`;
-      req.generatedImageName = newName; // guardamos el nombre para usarlo después
-      cb(null, newName);
-    } catch (err) {
-      cb(err);
-    }
-  }
-});
-const upload = multer({ storage });
+app.use(express.json());
 
 // Ruta principal con búsqueda y paginación
 app.get('/', async (req, res) => {
@@ -60,11 +42,18 @@ app.get('/', async (req, res) => {
       }
     : {};
 
-  const libros = await Libro.find(searchFilter).skip(skip).limit(limit);
-  const total = await Libro.countDocuments(searchFilter);
+  const libros = await Post.find(searchFilter).skip(skip).limit(limit);
+  const total = await Post.countDocuments(searchFilter);
   const totalPages = Math.ceil(total / limit);
 
-  const posts = libros.map(libro => libro.toObject?.() || libro);
+  const posts = libros
+    .map(libro => {
+      const obj = libro.toObject?.() || libro;
+      const img = obj.bookimg || '';
+      const isValidUrl = img.startsWith('http://') || img.startsWith('https://');
+      return isValidUrl ? { ...obj, imgUrl: img } : null;
+    })
+    .filter(Boolean);
 
   res.render('index', {
     posts,
@@ -76,15 +65,25 @@ app.get('/', async (req, res) => {
   });
 });
 
-// Ruta POST para guardar libro y subir imagen
-app.post('/add-book', upload.single('bookimg'), async (req, res) => {
-  const { title, author, Genre, Year, Synopsis } = req.body;
-  const bookimg = req.generatedImageName || ''; // usamos el nombre generado
+// Ruta POST para guardar libro con URL de imagen
+app.post('/add-book', async (req, res) => {
+  const { title, author, Genre, Year, Synopsis, bookimg } = req.body;
+
+  // Validar que la URL sea válida y apunte a una imagen
+  const validExtensions = ['.jpg', '.jpeg', '.png', '.webp'];
+  const hasValidExtension = validExtensions.some(ext => bookimg.toLowerCase().endsWith(ext));
+
+  if (
+    !validator.isURL(bookimg, { protocols: ['http', 'https'], require_protocol: true }) ||
+    !hasValidExtension
+  ) {
+    return res.status(400).send('La URL de la imagen no es válida o no termina en .jpg, .png, etc.');
+  }
 
   const newBook = { title, author, Genre, Year, Synopsis, bookimg };
 
   try {
-    await Libro.create(newBook);
+    await Post.create(newBook);
 
     const filePath = path.join(__dirname, '..', 'data', 'book.json');
     fs.readFile(filePath, 'utf8', (err, data) => {
