@@ -116,3 +116,18 @@ try {
 }
 });
 
+router.post('/edit-book/:id', async (req, res) => {
+  try {
+  await Book.findByyIdAndUpdate(req.params.id, req.body); //  usamos de MongoDb  la función de buscar el id y actualizar la base de datos. 
+  res.redirect('/');  // actualizamos con el post los datos que ha cambiado el usuario
+    
+} catch (err) {
+    console.error("Error when updating the edit page:", err);
+    res.redirect('/error.html'); // contorlamos los errores 
+}
+});
+  
+
+
+export default router;
+
