@@ -4,11 +4,9 @@ const libroSchema = new mongoose.Schema({
   title: String,
   author: String,
   Genre: String,
-  Year: Number,
+  Year: String,
   Synopsis: String,
-  bookimg: String,
+  bookimg: String
 });
 
-
-const Libro = mongoose.model('Libro', libroSchema, 'posts');
-export default Libro;
+export default mongoose.model('Post', libroSchema, 'posts');
