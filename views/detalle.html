@@ -18,10 +18,13 @@
     </nav>
     
     <header class="bg-dark text-white p-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <h1>Book Catalog</h1>
-            <a href="index.html" class="btn btn-outline-light">Back to catalog</a>
-        </div>
+      <div class="container d-flex justify-content-between align-items-center py-3">
+        <h1>Book Catalog</h1>
+      <div>
+        <a href="/add-book.html" class="btn btn-outline-light">Add book</a>
+        <a href="/filter.html" class="btn btn-outline-light">Filter</a>
+      </div>
+    </div>
     </header>
 
 
@@ -34,23 +37,20 @@
       <div class="row justify-content-center">
         <div class="col-md-10">
           <div class="card p-4">
-            <img src="{{post.booking}}" alt="Imagen del libro {{post.title}}" class="card-img-top img-fluid">
-          </div>
-          
-          
-            <div class="card-body">
-              <h4 class="card-title text-center">{{post.title}}</h4>
-              <p class="card-text"><strong>Author:</strong> {{post.author}}</p>
-              <p class="card-text"><strong>Synopsis:</strong> {{post.Synopsis}}</p>
-              <p class="card-text"><strong>Year:</strong> {{post.Year}}</p>
-              <p class="card-text"><strong>Genre:</strong> {{post.genre}}</p>
-             
-          
+            <div class="row">
+              <div class="col-md-4 text-center">
+                {{#imgUrl}}
+                <img src="{{imgUrl}}" class="img-fluid rounded" alt="{{title}}">
+              {{/imgUrl}}
+              </div>
+              <div class="col-md-8">
+                <p><strong>Author:</strong> {{author}}</p>
+                <p><strong>Genre:</strong> {{Genre}}</p>
+                <p><strong>Year:</strong> {{Year}}</p>
+                <p><strong>Synopsis:</strong><br>{{Synopsis}}</p>
+
+              </div>
             </div>
-        
-        </div>
-      </div>   
-    </div>
 
 
   
