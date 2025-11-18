@@ -105,31 +105,14 @@ module.exports = router;
 });
 
 
-router.get('/edit/:id', async (req, res) => {
-  try {
-    const book = await Book.findById(req.params.id);
-    res.redirect('/'); // vuelve al catálogo
-
-    res.render('edit-book', {
-     id: book._id.toString()
-      title: book.title,
-      author: book.author,
-      Genre: book.Genre,
-      Year: book.Year,
-      Synopsis: book.Synopsis,
-      bookimg: book.bookimg
-    });
-  } catch (err) {
-    console.error("Error loding edit page:", err);
-    res.redirect('/error.html');
-}
-});
-
-});
-
 router.get('/edit-book/:id', async (req, res) => {
+try {
   const book = await Book.findById(req.params.id);
   if (!book) return res.redirect('/error.html');
   res.render('edit-book', { post: book });
+} catch (err) {
+    console.error("Error loding edit page:", err);
+    res.redirect('/error.html');  // contorlamos los errores 
+}
 });
 
