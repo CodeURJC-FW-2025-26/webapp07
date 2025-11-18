@@ -41,8 +41,8 @@
       <label class="form-check-label" for="genreYouth">Youth</label>
     </div>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" name="genre" value="For Children" id="genreChildren" {{#isForChildren}}checked{{/isForChildren}}>
-      <label class="form-check-label" for="genreChildren">For Children</label>
+      <input class="form-check-input" type="checkbox" name="genre" value="For childrens" id="genreChildren" {{#isForChildren}}checked{{/isForChildren}}>
+      <label class="form-check-label" for="genreFor childrens">For childrens</label>
     </div>
     <div class="form-check form-check-inline">
       <input class="form-check-input" type="checkbox" name="genre" value="Novel" id="genreNovel" {{#isNovel}}checked{{/isNovel}}>
@@ -76,13 +76,13 @@
   <!-- PAGINACIÓN -->
 <div class="pagination">
   {{#prevPage}}
-    <a href="/?page={{prevPage}}&search={{query}}" class="btn btn-outline-secondary">Anterior</a>
+    <a href="/?page={{prevPage}}{{#query}}&search={{query}}{{/query}}{{#selectedGenres}}&genres={{selectedGenres}}{{/selectedGenres}}" class="btn btn-outline-secondary">Anterior</a>
   {{/prevPage}}
 
   <span>Página {{currentPage}} de {{totalPages}}</span>
 
   {{#nextPage}}
-    <a href="/?page={{nextPage}}&search={{query}}" class="btn btn-outline-secondary">Siguiente</a>
+    <a href="/?page={{nextPage}}{{#query}}&search={{query}}{{/query}}{{#selectedGenres}}&genres={{selectedGenres}}{{/selectedGenres}}" class="btn btn-outline-secondary">Siguiente</a>
   {{/nextPage}}
 </div>
 
@@ -93,15 +93,24 @@
   </footer>
   
 <script>
-  document.getElementById('genreFilterForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('genreFilterForm');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-    const selectedGenres = Array.from(document.querySelectorAll('input[name="genre"]:checked'))
-      .map(cb => cb.value);
+        const selectedGenres = Array.from(document.querySelectorAll('input[name="genre"]:checked'))
+          .map(cb => cb.value);
 
-    const query = selectedGenres.join(',');
+        const query = selectedGenres.join(',');
 
-    window.location.href = `/filter?genres=${encodeURIComponent(query)}`;
+        if (query.length > 0) {
+          window.location.href = `/?genres=${encodeURIComponent(query)}&page=1`;
+        } else {
+          window.location.href = '/';
+        }
+      });
+    }
   });
 </script>
 
