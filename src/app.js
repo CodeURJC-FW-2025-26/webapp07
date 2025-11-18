@@ -6,6 +6,7 @@ import mustacheExpress from 'mustache-express';
 import { fileURLToPath } from 'node:url';
 import validator from 'validator';
 import Post from './models/libro.js';
+import Opinion from './models/opinion.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,7 +25,9 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Ruta principal con búsqueda y paginación
+/* ---------------------- RUTAS DE LIBROS ---------------------- */
+
+// Página principal con búsqueda y paginación
 app.get('/', async (req, res) => {
   const page = parseInt(req.query.page) || 1;
   const limit = 6;
@@ -65,11 +68,10 @@ app.get('/', async (req, res) => {
   });
 });
 
-// Ruta POST para guardar libro con URL de imagen
+// Guardar nuevo libro
 app.post('/add-book', async (req, res) => {
   const { title, author, Genre, Year, Synopsis, bookimg } = req.body;
 
-  // Validar que la URL sea válida y apunte a una imagen
   const validExtensions = ['.jpg', '.jpeg', '.png', '.webp'];
   const hasValidExtension = validExtensions.some(ext => bookimg.toLowerCase().endsWith(ext));
 
@@ -108,21 +110,37 @@ app.post('/add-book', async (req, res) => {
     res.status(500).send('Error al guardar el libro');
   }
 });
+//Barra de filtrado
+app.get('/filter', async (req, res) => {
+  const genres = req.query.genres?.split(',') || [];
 
+  const libros = await Post.find({ Genre: { $in: genres } }).lean();
+
+  res.render('index', {
+    posts: libros,
+    selectedGenres: genres,
+    isRomance: genres.includes('Romance'),
+    isYouth: genres.includes('Youth'),
+    isForChildren: genres.includes('For Children'),
+    isNovel: genres.includes('Novel')
+  });
+});
+
+
+// Detalle de libro
 app.get('/detalle/:id', async (req, res) => {
   try {
     const libro = await Post.findById(req.params.id).lean();
+    const opinions = await Opinion.find({ bookId: req.params.id }).lean();
 
-    if (!libro) {
-      return res.status(404).send('Libro no encontrado');
-    }
+    if (!libro) return res.status(404).send('Libro no encontrado');
 
-    const isValidUrl = libro.bookimg?.startsWith('http://') || libro.bookimg?.startsWith('https://');
-    const imgUrl = isValidUrl ? libro.bookimg : null;
+    const imgUrl = libro.bookimg?.startsWith('http') ? libro.bookimg : null;
 
     res.render('detalle', {
       ...libro,
-      imgUrl
+      imgUrl,
+      opinions
     });
   } catch (error) {
     console.error('Error al cargar detalle:', error);
@@ -130,27 +148,89 @@ app.get('/detalle/:id', async (req, res) => {
   }
 });
 
-
-// DELETE 
-app.delete('/books/:id', async (req, res) => {
-    const id = req.params.id;
-
-    try {
-        await Book.findByIdAndDelete(id);
-        res.json({ success: true, message: "Libro eliminado" });
-    } catch (error) {
-        res.status(500).json({ success: false, message: "Error al borrar el libro" });
-    }
+//insertar opinion manual
+app.get('/insert-opinion-manual', async (req, res) => {
+  try {
+    await Opinion.create({
+      email: 'alicia@example.com',
+      password: '1234',
+      opinion: 'Me encantó el libro, muy emocionante.',
+      rating: 5,
+      bookId: 'ID_DEL_LIBRO'
+    });
+    res.send('Opinión añadida manualmente');
+  } catch (error) {
+    console.error('Error al insertar opinión:', error);
+    res.status(500).send('Error al insertar');
+  }
 });
 
+/* ---------------------- RUTAS DE OPINIONES ---------------------- */
 
-// Conexión a MongoDB
+// Guardar nueva opinión
+app.post('/add-opinion', async (req, res) => {
+  const { email, password, opinion, rating } = req.body;
+  try {
+    await Opinion.create({ email, password, opinion, rating });
+    res.redirect('/confirmation.html');
+  } catch (error) {
+    console.error('Error al guardar opinión:', error);
+    res.status(500).send('Error al guardar la opinión');
+  }
+});
+
+// Mostrar formulario para editar opinión
+app.get('/edit-opinion/:id', async (req, res) => {
+  try {
+    const opinion = await Opinion.findById(req.params.id).lean();
+    if (!opinion) return res.status(404).send('Opinión no encontrada');
+    res.render('edit-opinion', { opinion });
+  } catch (error) {
+    console.error('Error al buscar opinión:', error);
+    res.status(500).send('Error interno');
+  }
+});
+
+// Guardar cambios en la opinión
+app.post('/edit-opinion/:id', async (req, res) => {
+  const { email, password, opinion, rating } = req.body;
+  try {
+    await Opinion.findByIdAndUpdate(req.params.id, { email, password, opinion, rating });
+    res.redirect('/confirmation.html');
+  } catch (error) {
+    console.error('Error al actualizar opinión:', error);
+    res.status(500).send('Error al actualizar');
+  }
+});
+
+// Mostrar formulario de edición
+app.get('/edit-book/:id', async (req, res) => {
+  const libro = await Post.findById(req.params.id).lean();
+  if (!libro) return res.status(404).send('Libro no encontrado');
+  res.render('edit-book', libro);
+});
+
+// Guardar cambios del libro
+app.post('/edit-book/:id', async (req, res) => {
+  const { title, author, Genre, Year, Synopsis, bookimg } = req.body;
+  try {
+    await Post.findByIdAndUpdate(req.params.id, {
+      title, author, Genre, Year, Synopsis, bookimg
+    });
+    res.redirect(`/detalle/${req.params.id}`);
+  } catch (error) {
+    console.error('Error al actualizar libro:', error);
+    res.status(500).send('Error al actualizar libro');
+  }
+});
+
+/* ---------------------- CONEXIÓN Y SERVIDOR ---------------------- */
+
 mongoose.connect('mongodb://localhost:27017/board', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
 
-// Servidor activo
 app.listen(3000, () => {
   console.log('Servidor activo en http://localhost:3000');
 });
