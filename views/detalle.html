@@ -106,6 +106,34 @@
         alert('Error deleting the book');    
       }
     });
+    
+    document.addEventListener ('click', async (e) => {
+      if(!e.target.matches('.btn-delete-opinion')) return;
+      
+      e.preventDefault();
+      const confirmDelete = confirm('Are you sure you want to delete this opinion?');
+      if (!confirmDelete) return;
+      
+      const opinionId = '{{_id}}'; // Mustache/EJS renderiza el ID aquí
+
+      try {
+        const response = await fetch(`/Opinion/${opinionId}`, {
+          method: 'DELETE',
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          alert('Opinion successfully deleted');
+          window.location.reload(); // Redirige al catálogo
+        } else {
+          alert('Error deleting the opinion')y 
+        }
+      } catch (error) {
+        console.error('Error connecting to the server:', error);      
+        alert('Error deleting the opinion');    
+      }
+    });
   </script>
 </body>
 </html>
