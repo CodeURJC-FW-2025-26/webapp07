@@ -21,10 +21,7 @@ export async function deletePost(id){
     return await posts.findOneAndDelete({ _id: new ObjectId(id) });
 }
 
-export async function deletePosts(_id){
 
-    return await posts.deleteMany(_id);
-}
 
 export async function getPosts(){
 
