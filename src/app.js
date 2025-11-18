@@ -130,6 +130,20 @@ app.get('/detalle/:id', async (req, res) => {
   }
 });
 
+
+// DELETE 
+app.delete('/books/:id', async (req, res) => {
+    const id = req.params.id;
+
+    try {
+        await Book.findByIdAndDelete(id);
+        res.json({ success: true, message: "Libro eliminado" });
+    } catch (error) {
+        res.status(500).json({ success: false, message: "Error al borrar el libro" });
+    }
+});
+
+
 // Conexión a MongoDB
 mongoose.connect('mongodb://localhost:27017/board', {
   useNewUrlParser: true,
