@@ -33,40 +33,54 @@ app.get('/', async (req, res) => {
   const limit = 6;
   const skip = (page - 1) * limit;
   const query = req.query.search || '';
+  const genres = req.query.genres
+    ? req.query.genres.split(',').map(g => decodeURIComponent(g))
+    : [];
 
-  const searchFilter = query
-    ? {
-        $or: [
-          { title: { $regex: query, $options: 'i' } },
-          { author: { $regex: query, $options: 'i' } },
-          { Genre: { $regex: query, $options: 'i' } },
-          { Year: { $regex: query, $options: 'i' } }
-        ]
-      }
-    : {};
+  const searchFilter = {
+    ...(query && {
+      $or: [
+        { title: { $regex: query, $options: 'i' } },
+        { author: { $regex: query, $options: 'i' } },
+        { Genre: { $regex: query, $options: 'i' } },
+        { Year: { $regex: query, $options: 'i' } }
+      ]
+    }),
+    ...(genres.length > 0 && { Genre: { $in: genres } })
+  };
 
-  const libros = await Post.find(searchFilter).skip(skip).limit(limit);
+  const libros = await Post.find(searchFilter).skip(skip).limit(limit).lean();
   const total = await Post.countDocuments(searchFilter);
   const totalPages = Math.ceil(total / limit);
 
   const posts = libros
     .map(libro => {
-      const obj = libro.toObject?.() || libro;
-      const img = obj.bookimg || '';
+      const img = libro.bookimg || '';
       const isValidUrl = img.startsWith('http://') || img.startsWith('https://');
-      return isValidUrl ? { ...obj, imgUrl: img } : null;
+      return isValidUrl ? { ...libro, imgUrl: img } : null;
     })
     .filter(Boolean);
+
+  const encodedGenres = genres.map(g => encodeURIComponent(g)).join(',');
 
   res.render('index', {
     posts,
     query,
+    selectedGenres: encodedGenres,
+    selectedGenresArray: genres,
     currentPage: page,
     totalPages,
     prevPage: page > 1 ? page - 1 : null,
-    nextPage: page < totalPages ? page + 1 : null
+    nextPage: page < totalPages ? page + 1 : null,
+    hasFilters: genres.length > 0,
+    isRomance: genres.includes('Romance'),
+    isYouth: genres.includes('Youth'),
+    isForChildren: genres.includes('For Children'),
+    isNovel: genres.includes('Novel')
   });
 });
+
+
 
 // Guardar nuevo libro
 app.post('/add-book', async (req, res) => {
@@ -109,21 +123,6 @@ app.post('/add-book', async (req, res) => {
     console.error('Error al guardar libro:', error);
     res.status(500).send('Error al guardar el libro');
   }
-});
-//Barra de filtrado
-app.get('/filter', async (req, res) => {
-  const genres = req.query.genres?.split(',') || [];
-
-  const libros = await Post.find({ Genre: { $in: genres } }).lean();
-
-  res.render('index', {
-    posts: libros,
-    selectedGenres: genres,
-    isRomance: genres.includes('Romance'),
-    isYouth: genres.includes('Youth'),
-    isForChildren: genres.includes('For Children'),
-    isNovel: genres.includes('Novel')
-  });
 });
 
 
