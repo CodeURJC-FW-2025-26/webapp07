@@ -87,7 +87,7 @@ router.use((req, res, next) => {
     next(err);
 });
 
-router.use,(err, req, res, next) => 
+router.use,((err, req, res, next) => {
     console.error(err.stack); 
     res.status(err.status || 500).render('error', { title: 'Error', message: err.message }); 
 
