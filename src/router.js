@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const router = express.Router(); // va arriba, fuera de  ruta
-export default router;
+
 
 const DATA_FILE = path.join(process.cwd(), 'data', 'book.json');
 
