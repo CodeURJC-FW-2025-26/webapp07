@@ -28,7 +28,7 @@ fs.readFile(filePath, 'utf8', async (err, data) => {
     await Libro.deleteMany();
     await Libro.insertMany(books);
 
-    console.log(`✅ ${books.length} libros importados a MongoDB`);
+    console.log('${books.length} libros importados a MongoDB`);
     process.exit();
   } catch (e) {
     console.error('Error al importar libros:', e);
