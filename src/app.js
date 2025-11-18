@@ -28,8 +28,16 @@ const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(__dirname, '..', 'public', 'images'));
   },
-  filename: (req, file, cb) => {
-    cb(null, file.originalname);
+  filename: async (req, file, cb) => {
+    try {
+      const count = await Libro.countDocuments(); // número actual de libros
+      const ext = path.extname(file.originalname); // extensión original (.jpg, .png)
+      const newName = `book${count + 1}${ext}`;
+      req.generatedImageName = newName; // guardamos el nombre para usarlo después
+      cb(null, newName);
+    } catch (err) {
+      cb(err);
+    }
   }
 });
 const upload = multer({ storage });
@@ -71,7 +79,7 @@ app.get('/', async (req, res) => {
 // Ruta POST para guardar libro y subir imagen
 app.post('/add-book', upload.single('bookimg'), async (req, res) => {
   const { title, author, Genre, Year, Synopsis } = req.body;
-  const bookimg = req.file?.filename || '';
+  const bookimg = req.generatedImageName || ''; // usamos el nombre generado
 
   const newBook = { title, author, Genre, Year, Synopsis, bookimg };
 
