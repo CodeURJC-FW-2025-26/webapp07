@@ -28,7 +28,7 @@ fs.readFile(filePath, 'utf8', async (err, data) => {
     await Bokk.deleteMany();
     await Book.insertMany(books);
 
-    console.log('${books.length} books imported to MongoDb`);
+    console.log('${books.length} books imported to MongoDb');
     process.exit();
   } catch (e) {
     console.error('Error while importing  books:', e);
