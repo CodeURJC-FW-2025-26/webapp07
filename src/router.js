@@ -127,7 +127,9 @@ router.post('/edit-book/:id', async (req, res) => {
 }
 });
   
-
+router.get('/add-opinion/:id', (req, res) => {
+  res.render('add-opinion', { bookid: req.params.id });
+});
 
 export default router;
 
