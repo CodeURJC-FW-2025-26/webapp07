@@ -31,8 +31,8 @@
   <main class="grid-books">
     {{#posts}}
     <div class="book-card">
-      <img src="{{bookimg}}" alt="{{title}}">
-      <div class="card-body">
+      <img src="{{imgUrl}}" alt="{{title}}" class="img-fluid">
+    <div class="card-body">
         <h5 class="card-title">{{title}}</h5>
         <p class="card-text">{{author}}</p>
         <a href="/detalle/{{id}}" class="btn btn-outline-secondary btn-sm">View</a>
