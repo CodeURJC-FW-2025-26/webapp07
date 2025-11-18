@@ -25,9 +25,6 @@
     </header>
 
 
-
-
-
     <div class="container mt-4">
       <div class="row justify-content-center">
         <div class="col-md-10">
@@ -43,11 +40,47 @@
                 <p><strong>Genre:</strong> {{Genre}}</p>
                 <p><strong>Year:</strong> {{Year}}</p>
                 <p><strong>Synopsis:</strong><br>{{Synopsis}}</p>
-
+                <p><strong>Rating:</strong> {{rating}}<p>
               </div>
+          </div>
+
+    <hr>
+
+    <section>
+       <h4><strong>Opinions</strong></h4>
+
+          {{#post.opinions}}
+          <div class="border rounded p-3 mb-3">
+            <p><strong>{{author}}</strong></p>
+            <p>{{text}}</p>
+
+            {{#rating}}
+            <p><strong>Rating:</strong> {{rating}} / 5</p>
+            {{/rating}}
+
+            <div class="d-flex gap-2">
+              <!-- Edit opinion (GET form expected at this route) -->
+              <a href="/detalle/{{post._id}}/opinions/{{_id}}/edit" class="btn btn-outline-primary btn-sm">Edit</a>
+
+              <!-- Delete opinion (POST) -->
+              <form method="POST" action="/detalle/{{post._id}}/opinions/{{_id}}/delete" style="display:inline">
+                <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+              </form>
             </div>
+          </div>
+          {{/post.opinions}}
 
+          {{^post.opinions}}
+          <p>No opinions yet.</p>
+          {{/post.opinions}}
 
+          <hr>
+      <h4>Opinions</h4>
+      <p><strong>Alicia:</strong> Honestly, it has been a very interesting book to read. Without even realizing it, I
+        was already at the end of it, and I highly recommend it if you’re looking for a story that combines romance and
+        drama. It truly captivated me as a reader. ★★★★☆</p>
+    </section>
+  </main>
   
       <!-- Pie de página -->
   <footer class="text-center py-4 bg-light">
