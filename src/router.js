@@ -80,14 +80,6 @@ router.get('/detalle/:id', async (req, res) => {
 });
   
 
-router.get('/libro/:id/delete', async (req, res) => {
-  let libro = await catalog.deletelibro(req.params.id);
-  if (Book && libro.imageFilename) {
-    await fs.rm(catalog.UPLOADS_FOLDER + '/' + libro.imageFilename);
-    }
-    res.redirect('/libro');
-});
-
 
 router.use((req, res, next) => {
     let err = new Error('Page not found');
