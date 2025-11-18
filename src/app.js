@@ -172,7 +172,7 @@ app.delete('/Opinion/:id', async (req, res) => {
   console.log('Trying to delete opinion:', req.params.id);
 
   try {
-    const result = await Post.findByIdAndDelete(req.params.id);
+    const result = await Opinion.findByIdAndDelete(req.params.id);
     if (!result) {
       console.log('Book not found:', req.params.id);
       return res.status(404).json({ success: false, message: 'Opinion not found' });
