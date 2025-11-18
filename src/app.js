@@ -147,6 +147,24 @@ app.get('/detalle/:id', async (req, res) => {
     res.status(500).send('Error interno del servidor');
   }
 });
+// Delete a book
+app.delete('/Post/:id', async (req, res) => {
+  console.log('Trying to delete book:', req.params.id);
+
+  try {
+    const result = await Post.findByIdAndDelete(req.params.id);
+    if (!result) {
+      console.log('Book not found:', req.params.id);
+      return res.status(404).json({ success: false, message: 'Book not found' });
+    }
+
+    console.log('Deleted book:', result);
+    res.json({ success: true, message: 'Deleted book' });
+  } catch (error) {
+    console.error('EError deleting book:', error);
+    res.status(500).json({ success: false, message: 'Error deleting book' });
+  }
+});
 
 //insertar opinion manual
 app.get('/insert-opinion-manual', async (req, res) => {
