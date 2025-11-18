@@ -2,7 +2,7 @@ import fs from 'fs';
 import mongoose from 'mongoose';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import Libro from './models/libro.js';
+import Book from './models/libro.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -25,13 +25,13 @@ fs.readFile(filePath, 'utf8', async (err, data) => {
     const books = JSON.parse(data);
 
     // Limpia la colección antes de importar (opcional)
-    await Libro.deleteMany();
-    await Libro.insertMany(books);
+    await Bokk.deleteMany();
+    await Book.insertMany(books);
 
-    console.log('${books.length} libros importados a MongoDB`);
+    console.log('${books.length} books imported to MongoDb`);
     process.exit();
   } catch (e) {
-    console.error('Error al importar libros:', e);
+    console.error('Error while importing  books:', e);
     process.exit(1);
   }
 });
