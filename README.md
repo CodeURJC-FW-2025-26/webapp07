@@ -187,7 +187,11 @@ Sara El Moussaoui Houlbi
      - [detalle.html](views/detalle.html).
      - [import-opinion.js](src/import-opinion.js).
      - [app.js](src/app.js)
+ 
+  Bárbara Cruz González
+- Description of my tasks during the practice.
 
+- 5 best commits.
 
 
 
