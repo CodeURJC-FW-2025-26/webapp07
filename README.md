@@ -143,8 +143,8 @@ npm run watch
 
 -  src
   -  models
-    -  libro.js: Modelo Mongoose para los libros del catálogo.
-    -  opinion.js: Modelo Mongoose para las opiniones de los usuarios.
+    - libro.js: Modelo Mongoose para los libros del catálogo.
+    - opinion.js: Modelo Mongoose para las opiniones de los usuarios.
 
 
 src/app.js
