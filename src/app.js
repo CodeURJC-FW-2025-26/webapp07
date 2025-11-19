@@ -235,9 +235,16 @@ app.post('/edit-opinion/:id', async (req, res) => {
 
 // Mostrar formulario de edición
 app.get('/edit-book/:id', async (req, res) => {
-  const libro = await Post.findById(req.params.id).lean();
-  if (!libro) return res.status(404).send('Libro no encontrado');
-  res.render('edit-book', libro);
+  try {
+    const libro = await Post.findById(req.params.id).lean();
+    if (!libro) return res.status(404).send('Libro no encontrado');
+
+   
+    res.render('edit-book', { post: libro });
+  } catch (error) {
+    console.error('Error al cargar edit page:', error);
+    res.redirect('/error.html');
+  }
 });
 
 // Guardar cambios del libro
@@ -247,10 +254,10 @@ app.post('/edit-book/:id', async (req, res) => {
     await Post.findByIdAndUpdate(req.params.id, {
       title, author, Genre, Year, Synopsis, bookimg
     });
-    res.redirect(`/detalle/${req.params.id}`);
+    res.redirect('/confirmation.html');
   } catch (error) {
     console.error('Error al actualizar libro:', error);
-    res.status(500).send('Error al actualizar libro');
+    res.redirect('/error.html');
   }
 });
 
