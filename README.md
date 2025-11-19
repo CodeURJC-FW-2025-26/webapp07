@@ -140,40 +140,42 @@ npm run watch
 
 - data
   - book.json: Base de datos estática con los libros cargados inicialmente.
+- src
+  - models/libro.js: Modelo Mongoose para los libros del catálogo.
+  - models/opinion.js: Modelo Mongoose para las opiniones de los usuarios.
+  - app.js:Centro de control de la aplicación: configura Express, conecta con MongoDB,      define rutas y lanza el servidor.
+  - router.js: Define rutas específicas para mostrar libros, aplicar filtros, paginar       resultados y renderizar la vista principal (index.html).
+  - board.js: Archivo de configuración o inicialización del servidor.
+  - edit-opinion.js: Script del lado del cliente que gestiona el formulario de edición      de opiniones
+  - import-books.js: Script Node.js que importa libros desde book.json a MongoDB usando     el modelo libro.js. Se ejecuta una sola vez para poblar la base de datos con            contenido inicial.
 
--  src
-  -  models
-    - libro.js: Modelo Mongoose para los libros del catálogo.
-    - opinion.js: Modelo Mongoose para las opiniones de los usuarios.
+  - loadbooks.js: Alternativa o complemento a import-books.js. Puede encargarse de          cargar libros en memoria, sincronizar con book.json, o preparar datos para prueba
 
 
-src/app.js
-Centro de control de la aplicación: configura Express, conecta con MongoDB, define rutas y lanza el servidor.
+-  Views
+  - index.html: Página principal del catálogo con filtros, paginación y listado de          libros.
+  - detalle.html: Página de detalle de cada libro, muestra sus datos y opiniones.
+  - add-opinion.html: Formulario para añadir una opinión a un libro.
+  - edit-book.html: Formulario para editar un libro existente.
+  - edit-opinion.html: Formulario para editar una opinión existente.
+  - error.html: Página que indica que hubo un error al guardar un libro u opinión.
+  - confirmation.html: Página que confirma que el libro o la opinión se ha guardado         correctamente.
+  - header.html, footer.html: Componentes comunes reutilizables en todas las páginas.
 
- views/index.html
-Página principal del catálogo con filtros, paginación y listado de libros.
+# PARTICIPATION OF THE TEAM MEMBERS #
 
-views/detalle.html
-Página de detalle de cada libro, muestra sus datos y opiniones.
+Rocío Zancajo Zapatero:
 
-views/add-opinion.html
-Formulario para añadir una opinión a un libro.
+- Description of my tasks during the practice.
+During this project, I actively participated in the frontend and backend development of the web application, implementing essential features to improve the usability and robustness of the system. I developed pagination for six books per page, a search bar to filter by title or author, and a genre filtering system connected to the backend. I also added book creation with strict validations, ensuring mandatory fields, unique titles, and correct formats, as well as protecting the server from attempts to bypass client validation. I contributed to the design and organisation of views such as detail.html and edit-opinion.html.
 
-views/edit-book.html
-Formulario para editar un libro existente.
- 
- views/edit-opinion.html
-Formulario para editar una opinión existente.
 
-views/error.html
-Página que indica que hubo un error al guardar un libro u opinión.
-
-views/confirmation.html
-Página que confirma que el libro o la opinión se ha guardado correctamente.
-
-views/header.html, footer.html
-Componentes comunes reutilizables en todas las páginas.
-
+- 5 best commits.
+  - [add-book.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/4fa0a0391f873b04004d1e0d050e4ff892a28234).
+  - [index.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/b3a2511b47fa53e104bd1320661089a238368e45).
+  - [app.js](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/679968ed7be8699181fca901541fbfa363127724).
+ - [barra-filtrado.css](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/67f4addc4ae1c2df24bb01657fcfbe411f8d2be2).
+ - [import-books.js](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/9628ec5604b76d1f47b8925bc5f89aea8009b71f).
 
 
 
