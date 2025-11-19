@@ -31,41 +31,47 @@
       <div class="col-12 col-md-8 col-lg-6">
 
         <h2 class="text-center"> <!--css--><strong> EDIT BOOK </strong> </h2>
-         <form id= "editform" action="/edit-book/{{post._id}}" method="POST" enctype= "application/x-www-form-urlencoded" required>
+        <form id= "editform" action="/edit-book/{{post._id}}" method="POST" enctype= "application/x-www-form-urlencoded" required>
           
           <div> <!--css-->
             <label for="title" class="form-label">Book title</label>
-            <input type="text" class="form-control" id="title"  name="title"  value= "{{title}}" placeholder="Ej. Cien años de soledad" required>
+            <input type="text" class="form-control" id="title" name="title" value="{{post.title}}" required>
+
           
           </div>
 
           <div><!--css-->
             <label for="author" class="form-label">Author</label>
-            <input type="text" class="form-control" id="author" name="author"  value= "{{author}}" placeholder="Ej. Gabriel García Márquez" required>
+            <input type="text" class="form-control" id="author" name="author" value="{{post.author}}" required>
+
             
           </div>
 
           <div><!--css-->
             <label for="genre" class="form-label">Genre</label>
-            <input type="text" class="form-control" id="genre" name="Genre"  value= "{{Genre}}" placeholder="Ej. Realismo mágico" required>
-          </div>
+            <input type="text" class="form-control" id="Genre" name="Genre" value="{{post.Genre}}" required>
+
 
           <div><!--css-->
             <label for="year" class="form-label">Publication year</label>
-            <input type="number" class="form-control" id="year" name="Year"  value= "{{Year}}" placeholder="Ej. 1967" required>
+            <input type="number" class="form-control" id="Year" name="Year" value="{{post.Year}}" required>
+
           </div>
 
           <div><!--css-->
             <label for="cover" class="form-label">URL of the book cover</label>
-            <input type="url" class="form-control" id="cover" name="bookimg"   value= "{{bookimg}}"  placeholder="Ej. https://..." required>
+            <input type="url" class="form-control" id="cover" name="bookimg" value="{{post.bookimg}}" required>
+
           </div>
 
-           <div><!--css-->
+          <div><!--css-->
             <label for="year" class="form-label"> Synopsis </label>
-            <textarea class="form-control" id="synopsis" name="Synopsis" rows="4" required value= "{{Synopsis}}" placeholder="Ej. 1967" required>
+            <textarea class="form-control" id="Synopsis" name="Synopsis" rows="4" required>
+              {{post.Synopsis}}
+            </textarea>
+
           </div>
-              
-    <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn btn-primary">Save</button>
           <a href="/" class="btn btn-outline-secondary">← Cancel</a>
         </form>
 
@@ -77,5 +83,5 @@
          </div>
       </div>
     </div>
-</body>
+  </body>
 </html>
