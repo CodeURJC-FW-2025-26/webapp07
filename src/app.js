@@ -169,23 +169,23 @@ app.delete('/Post/:id', async (req, res) => {
 // delete an opinion
 
 app.delete('/Opinion/:id', async (req, res) => {
-  console.log('Trying to delete opinion:', req.params.id);
+  const opinionId = req.params.id;
 
   try {
-    const result = await Opinion.findByIdAndDelete(req.params.id);
+    const result = await Opinion.findByIdAndDelete(opinionId);
+
     if (!result) {
-      console.log('Book not found:', req.params.id);
+      console.log(' Opinión no encontrada:', opinionId);
       return res.status(404).json({ success: false, message: 'Opinion not found' });
     }
 
-    console.log('Deleted opinion:', result);
-    res.json({ success: true, message: 'Deleted opinion' });
+    console.log(` Opinión eliminada: ${result._id}`);
+    res.json({ success: true, message: 'Opinion deleted successfully' });
   } catch (error) {
-    console.error('Error deleting opinion:', error);
+    console.error(' Error al eliminar la opinión:', error);
     res.status(500).json({ success: false, message: 'Error deleting opinion' });
   }
 });
-
 
 //add opinion, mostrar el formulario y pasar el valor de bookId
 app.get('/add-opinion/:id', async (req, res) => {
