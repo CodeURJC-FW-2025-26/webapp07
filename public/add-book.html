@@ -24,7 +24,7 @@
       <div class="col-12 col-md-8 col-lg-6">
         <h2 class="text-center mb-4"><strong>ADD BOOK</strong></h2>
 
-        <form method="POST" action="/add-book">
+        <form id="addBookForm" method="POST" action="/add-book">
           <div class="mb-3">
             <label for="title" class="form-label">Book title</label>
             <input type="text" class="form-control" id="title" name="title" required>
@@ -56,10 +56,11 @@
           </div>
 
           <div class="d-grid gap-2">
-            <a href="confirmation.html" class="btn btn-primary">Save</a>
+            <button type="submit" class="btn btn-primary">Save</button>
             <a href="/" class="btn btn-secondary">← Cancel</a>
           </div>
         </form>
+
       </div>
     </div>
   </main>
@@ -67,6 +68,21 @@
   <footer class="text-center py-4 bg-light">
     <p>&copy; 2025 Book Catalog | Created by Team 7</p>
   </footer>
+
+  <script>
+  document.getElementById('addBookForm').addEventListener('submit', function (e) {
+    const fields = ['title', 'author', 'genre', 'year', 'cover', 'synopsis'];
+    const isEmpty = fields.some(id => {
+      const el = document.getElementById(id);
+      return !el || el.value.trim() === '';
+    });
+
+    if (isEmpty) {
+      e.preventDefault();
+      window.location.href = '/error.html';
+    }
+  });
+</script>
 
 </body>
 </html>
