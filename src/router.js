@@ -48,11 +48,10 @@ router.get('/', async (req, res) => {
 });
 
 
-router.get,'/add-book', (req, res) => 
-
-    res.render,'add-book', 
-        posts, boardService.getPosts()
-
+router.get,('/add-book', (req, res) => {
+  res.render,'add-book', 
+    posts, boardService.getPosts()
+});
 router.post('/add-book', async (req, res) => {
   try {
     const { title, author, genre, year, cover } = req.body;
