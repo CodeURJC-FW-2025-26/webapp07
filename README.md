@@ -126,15 +126,53 @@ My participation focused on the development and design of several important part
 # Execution Instructions #
 
 Requirements:
-• 	Node.js
-• 	MongoDB
-• 	npm
+- Node.js
+- MongoDB
+- npm
 
 Setup:
 git clone https://github.com/CodeURJC-FW-2025-26/book-catalog.git
 cd book-catalog
 npm install
 npm run watch
+
+# Files Description #
+
+- data
+  - book.json: Base de datos estática con los libros cargados inicialmente.
+
+-  src
+  -  models
+    -  libro.js: Modelo Mongoose para los libros del catálogo.
+    -  opinion.js: Modelo Mongoose para las opiniones de los usuarios.
+
+
+src/app.js
+Centro de control de la aplicación: configura Express, conecta con MongoDB, define rutas y lanza el servidor.
+
+ views/index.html
+Página principal del catálogo con filtros, paginación y listado de libros.
+
+views/detalle.html
+Página de detalle de cada libro, muestra sus datos y opiniones.
+
+views/add-opinion.html
+Formulario para añadir una opinión a un libro.
+
+views/edit-book.html
+Formulario para editar un libro existente.
+ 
+ views/edit-opinion.html
+Formulario para editar una opinión existente.
+
+views/error.html
+Página que indica que hubo un error al guardar un libro u opinión.
+
+views/confirmation.html
+Página que confirma que el libro o la opinión se ha guardado correctamente.
+
+views/header.html, footer.html
+Componentes comunes reutilizables en todas las páginas.
 
 
 
