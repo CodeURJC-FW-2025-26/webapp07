@@ -19,6 +19,7 @@
       </div>
       <div class="item">
         <a href="add-book.html" class="btn btn-outline-light">Add book</a>
+        <a href="filter.html" class="btn btn-outline-light">Filter</a>
       </div>
     </div>
   </header>
@@ -29,23 +30,18 @@
       <div class="col-12 col-md-8 col-lg-6">
 
         <h2><strong>YOUR OPINION</strong></h2>
-        
+
         <form role="form" method="POST" action="/add-opinion">
-          <input type="hidden" name="bookId" value="{{bookId}}">
-        
-          <div>
-            <label for="email" class="form-label">Email:</label>
-            <input type="email" class="form-control" id="email" name="email"  placeholder="Enter email">
-          </div>
+          <input type="hidden" name="bookId" value="{{_id}}"> <!-- ID del libro actual -->
 
           <div>
-            <label for="pwd" class="form-label">Password:</label>
-            <input type="password" class="form-control" id="pwd" name="password" placeholder="Enter password">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
           </div>
 
           <div>
             <label for="opinion" class="form-label">Opinion:</label>
-            <input type="text" class="form-control" id="opinion" name="opinion" placeholder="Enter opinion">
+            <input type="text" class="form-control" id="opinion" name="opinion" placeholder="Enter opinion" required>
           </div>
 
           <div>
@@ -59,15 +55,11 @@
             </div>
           </div>
 
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="remember">
-            <label class="form-check-label" for="remember">Remember me</label>
-          </div>
-
-          <button type="submit" href="/confirmation" class="btn btn-primary">Save</button><br>
-          <p> </p>
-          <a href="error.html" class="btn btn-secondary">← Cancel</a>
+          <button type="submit" class="btn btn-primary">Save</button>
+          <p></p>
+          <a href="index.html" class="btn btn-secondary">← Cancel</a>
         </form>
+
 
         <footer>
           <div class="container">
