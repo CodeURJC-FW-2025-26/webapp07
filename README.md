@@ -177,5 +177,19 @@ During this project, I actively participated in the frontend and backend develop
   - [barra-filtrado.css](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/67f4addc4ae1c2df24bb01657fcfbe411f8d2be2).
   - [import-books.js](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/9628ec5604b76d1f47b8925bc5f89aea8009b71f).
 
+Sara El Moussaoui Houlbi 
+
+- Description of my tasks during the practice.
+
+- 5 best commits.
+     - [edit-book.html](views/edit-book.html).
+     - [add-opinion.html](public/add-opinion.html).
+     - [detalle.html](views/detalle.html).
+     - [import-opinion.js](src/import-opinion.js).
+     - [app.js](src/app.js)
+
+
+
+
 
 
