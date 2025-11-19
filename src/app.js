@@ -169,23 +169,23 @@ app.delete('/Post/:id', async (req, res) => {
 // delete an opinion
 
 app.delete('/Opinion/:id', async (req, res) => {
-  const opinionId = req.params.id;
+  console.log('Trying to delete opinion:', req.params.id);
 
   try {
-    const result = await Opinion.findByIdAndDelete(opinionId);
-
+    const result = await Opinion.findByIdAndDelete(req.params.id);
     if (!result) {
-      console.log(' Opinión no encontrada:', opinionId);
+      console.log('Book not found:', req.params.id);
       return res.status(404).json({ success: false, message: 'Opinion not found' });
     }
 
-    console.log(` Opinión eliminada: ${result._id}`);
-    res.json({ success: true, message: 'Opinion deleted successfully' });
+    console.log('Deleted opinion:', result);
+    res.json({ success: true, message: 'Deleted opinion' });
   } catch (error) {
-    console.error(' Error al eliminar la opinión:', error);
+    console.error('Error deleting opinion:', error);
     res.status(500).json({ success: false, message: 'Error deleting opinion' });
   }
 });
+
 
 //add opinion, mostrar el formulario y pasar el valor de bookId
 app.get('/add-opinion/:id', async (req, res) => {
@@ -196,10 +196,19 @@ app.get('/add-opinion/:id', async (req, res) => {
 
 
 /* ---------------------- RUTAS DE OPINIONES ---------------------- */
+// Mostrar formulario para añadir opinión
+app.get('/add-opinion/:bookId', (req, res) => {
+  res.render('add-opinion', { bookId: req.params.bookId });
+});
 
 // Guardar nueva opinión
 app.post('/add-opinion', async (req, res) => {
   const { email, password, opinion, rating, bookId } = req.body;
+
+  if (!email || !opinion || !rating || !bookId) {
+    return res.status(400).send('Faltan campos obligatorios');
+  }
+
   try {
     await Opinion.create({ email, password, opinion, rating, bookId });
     res.redirect('/confirmation.html');
@@ -208,6 +217,7 @@ app.post('/add-opinion', async (req, res) => {
     res.status(500).send('Error al guardar la opinión');
   }
 });
+
 
 // Mostrar formulario para editar opinión
 app.get('/edit-opinion/:id', async (req, res) => {
@@ -270,4 +280,4 @@ mongoose.connect('mongodb://localhost:27017/board', {
 
 app.listen(3000, () => {
   console.log('Servidor activo en http://localhost:3000');
-});
+});   
