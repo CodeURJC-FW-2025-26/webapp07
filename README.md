@@ -131,10 +131,10 @@ Requirements:
 - npm
 
 Setup:
-git clone https://github.com/CodeURJC-FW-2025-26/book-catalog.git
-cd book-catalog
-npm install
-npm run watch
+- git clone https://github.com/CodeURJC-FW-2025-26/book-catalog.git
+- cd book-catalog
+- npm install
+- npm run watch
 
 # Files Description #
 
