@@ -187,22 +187,13 @@ app.delete('/Opinion/:id', async (req, res) => {
 });
 
 
-//insertar opinion manual
-app.get('/insert-opinion-manual', async (req, res) => {
-  try {
-    await Opinion.create({
-      email: 'alicia@example.com',
-      password: '1234',
-      opinion: 'Me encantó el libro, muy emocionante.',
-      rating: 5,
-      bookId: 'ID_DEL_LIBRO'
-    });
-    res.send('Opinión añadida manualmente');
-  } catch (error) {
-    console.error('Error al insertar opinión:', error);
-    res.status(500).send('Error al insertar');
-  }
+//add opinion, mostrar el formulario y pasar el valor de bookId
+app.get('/add-opinion/:id', async (req, res) => {
+  
+    res.render('add-opinion',{bookId: req.params.id});
 });
+
+
 
 /* ---------------------- RUTAS DE OPINIONES ---------------------- */
 
