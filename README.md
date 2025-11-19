@@ -35,6 +35,9 @@ Review
 - Comment
 - Rating (e.g., 1 to 5 stars)
 - Date
+
+# PRÁCTICA 1 #
+
 # PARTICIPATION OF THE TEAM MEMBERS #
 
 Sara El Moussaoui Houlbi:
@@ -118,7 +121,20 @@ My participation focused on the development and design of several important part
   - add-opinion.html
 
 
+# PRÁCTICA 2 #
 
+# Execution Instructions #
+
+Requirements:
+• 	Node.js
+• 	MongoDB
+• 	npm
+
+Setup:
+git clone https://github.com/CodeURJC-FW-2025-26/book-catalog.git
+cd book-catalog
+npm install
+npm run watch
 
 
 
