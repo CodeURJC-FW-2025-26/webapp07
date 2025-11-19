@@ -15,7 +15,7 @@ router.post('/update-opinion', async (req, res) => {
         res.redirect('/confirmation.html');
     } catch (error) {
         console.error('Error al actualizar opinión:', error);
-        res.redirect('/confirmation-error.html');
+        res.redirect('/error.html');
     }
 });
 
