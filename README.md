@@ -188,12 +188,19 @@ Sara El Moussaoui Houlbi
      - [import-opinion.js](src/import-opinion.js).
      - [app.js](src/app.js)
  
-  Bárbara Cruz González
+  Bárbara Cruz González:
+  
 - Description of my tasks during the practice.
+During this second practice, I was mainly responsible for creating the details page so that it would redirect completely to it, and once in each book I had to make sure that the book could be deleted correctly and that it would redirect correctly to the book editing form. I also had to check that when deleting a book it would also be deleted from the MongoDB database, in addition to redirecting the page to an error page whenever there were problems with the form.
 
 - 5 best commits.
+    - [router.js](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/9491af9225a1a6856d30f4ba79123443f6638c7f)
+    - [app.js](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/d1dea490b3fe724dd152e4543fccda58d175cd34)
+    - [app.js](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/70132f2812333b37cadfd7674ed8d75011e9c624)
+    - [detalle.html](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/fd3661f63258e875c412745a9d2d67cdfbdf0fe1)
+    - [board.js](https://github.com/CodeURJC-FW-2025-26/webapp07/commit/37c530a4a93c8c052183ab752ddbb5ec767d564e)
 
-
+  
 
 
 
