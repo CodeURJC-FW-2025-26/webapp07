@@ -180,6 +180,7 @@ During this project, I actively participated in the frontend and backend develop
 Sara El Moussaoui Houlbi 
 
 - Description of my tasks during the practice.
+During this project, I was mainly responsible for creating the edit-book button on the details page and the page edit-book itself (import the data of the book that is going to be edited by the user from MongoDb and also change the data on MongoDb) . Also, i was in charge of the add-opinion button on the detials page and the add-opinion page on itsalef (add the data of the opinion on MongoDb), and  in each opinion I had to make sure that the opinion could be deleted correctly from the detail page and, also, from the MongoDB database. 
 
 - 5 best commits.
      - [edit-book.html](views/edit-book.html).
